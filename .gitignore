@@ -23,3 +23,13 @@ x64/Release/*
 !x64/Release/cutest.dll
 !x64/Release/cutest.lib
 !x64/Release/MfcTestRunnerApp.exe
+
+source/atl/functions/*/Debug/*
+source/atl/functions/*/Release/*
+source/atl/functions/*/x64/Debug/*
+source/atl/functions/*/x64/Release/*
+
+source/gtest_static/*/Debug/*
+source/gtest_static/*/Release/*
+source/gtest_static/*/x64/Debug/*
+source/gtest_static/*/x64/Release/*
