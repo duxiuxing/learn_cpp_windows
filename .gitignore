@@ -1,5 +1,6 @@
 *.ipch
 *.sdf
+*.suo
 *.VC.db
 *.VC.opendb
 
