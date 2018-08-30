@@ -47,13 +47,51 @@ using namespace ATL;
 /*
     TestedMethod: ATLPath::RemoveFileSpec()
     Description: Removes the trailing file name and backslash from a path, if they are present.
+    Output:
+        1. 若当前路径不是顶级路径，RemoveFileSpec()返回非0，调用RemoveFileSpec()之后，得到父亲文件夹路径；
+        2. 若当前路径是顶级路径，RemoveFileSpec()返回FALSE；
+*/
+TEST(ATLPathTest, RemoveFileSpec) {
+    // 本地路径
+    {
+        CPath path(_T("C:\\Windows\\notepad.exe"));
+
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("C:\\Windows"), path.m_strPath);
+
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("C:\\"), path.m_strPath);
+
+        EXPECT_EQ(FALSE, path.RemoveFileSpec());
+    }
+
+    // 共享路径
+    {
+        CPath path(_T("\\\\localhost\\share\\Wallpaper.jpg"));
+
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\localhost\\share"), path.m_strPath);
+
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\localhost"), path.m_strPath);
+
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\"), path.m_strPath);
+
+        EXPECT_EQ(FALSE, path.RemoveFileSpec());
+    }
+}
+
+/*
+    TestedMethod: ATLPath::RemoveFileSpec()
+    Description: 利用ATLPath::RemoveFileSpec()来获得父亲文件夹路径
     Steps:
         1. 通过GetModuleFileName()获得当前exe的路径
         2. 通过字符串截取来获得exe所在的文件夹路径
         3. 调用ATLPath::RemoveFileSpec()获得当前exe所在的文件夹路径
         4. 2和3的文件夹路径应当一致
 */
-TEST(ATLPathTest, RemoveFileSpec) {
+TEST(ATLPathTest, GetParentDirectory) {
     // 1
     CString exePath;
     ASSERT_NE(::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH), 0);
@@ -62,7 +100,7 @@ TEST(ATLPathTest, RemoveFileSpec) {
     // 2
     CString dirPath1;
     {
-        ATL::CPath path(exePath);
+        CPath path(exePath);
         dirPath1 = exePath.Left(path.FindFileName() - 1);
     }
 
