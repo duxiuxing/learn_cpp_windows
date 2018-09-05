@@ -34,3 +34,8 @@ source/gtest_static/*/Debug/*
 source/gtest_static/*/Release/*
 source/gtest_static/*/x64/Debug/*
 source/gtest_static/*/x64/Release/*
+
+source/runner/console/*/Debug/*
+source/runner/console/*/Release/*
+source/runner/console/*/x64/Debug/*
+source/runner/console/*/x64/Release/*
