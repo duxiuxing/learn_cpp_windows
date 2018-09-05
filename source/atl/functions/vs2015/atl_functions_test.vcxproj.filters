@@ -20,11 +20,14 @@
     <ClCompile Include="..\stdafx.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\third_party\googletest\src\gtest_main.cc">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\atlpath_test.cpp">
       <Filter>Test</Filter>
+    </ClCompile>
+    <ClCompile Include="..\gtest_main.cc">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dllmain.cpp">
+      <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

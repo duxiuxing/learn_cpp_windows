@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root title="Learn C++ in Windows" platform="windows">
+  <test libName="atl_functions_test.dll" />
+</root>
