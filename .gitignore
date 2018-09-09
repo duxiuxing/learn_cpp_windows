@@ -5,10 +5,10 @@
 *.VC.db
 *.VC.opendb
 
-Debug/*
-Release/*
-x64/Debug/*
-x64/Release/*
+Debug(gtest)/*
+Release(gtest)/*
+x64/Debug(gtest)/*
+x64/Release(gtest)/*
 
 Debug(cutest)/*
 Release(cutest)/*
@@ -28,10 +28,10 @@ source/gdiplus/*/Debug*
 source/gdiplus/*/Release*
 source/gdiplus/*/x64/Debug*
 
-source/gtest_static/*/Debug/*
-source/gtest_static/*/Release/*
-source/gtest_static/*/x64/Debug/*
-source/gtest_static/*/x64/Release/*
+source/gtest_static/*/Debug*
+source/gtest_static/*/Release*
+source/gtest_static/*/x64/Debug*
+source/gtest_static/*/x64/Release*
 
 source/runner/console/*/Debug*
 source/runner/console/*/Release*
