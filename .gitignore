@@ -1,4 +1,5 @@
 *.ipch
+*.orig
 *.sdf
 *.suo
 *.VC.db
@@ -22,6 +23,10 @@ source/atl/functions/*/Debug*
 source/atl/functions/*/Release*
 source/atl/functions/*/x64/Debug*
 source/atl/functions/*/x64/Release*
+
+source/gdiplus/*/Debug*
+source/gdiplus/*/Release*
+source/gdiplus/*/x64/Debug*
 
 source/gtest_static/*/Debug/*
 source/gtest_static/*/Release/*

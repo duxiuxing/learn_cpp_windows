@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "atl_functions_test", "source\atl\functions\vs2015\atl_functions_test.vcxproj", "{85038FE2-80EC-4142-BB76-D915695F2973}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlFunctionsTest", "source\atl\functions\vs2015\AtlFunctionsTest.vcxproj", "{85038FE2-80EC-4142-BB76-D915695F2973}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F} = {5E5AC592-F024-477E-B3D3-19D45DFD6C7F}
 	EndProjectSection
@@ -11,6 +11,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_static", "source\gtest_static\vs2015\gtest_static.vcxproj", "{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleTestRunnerApp", "source\runner\console\vs2015\ConsoleTestRunnerApp.vcxproj", "{8456CB77-72B0-454A-B20A-180759EBCE5E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GdiplusTest", "source\gdiplus\vs2015\GdiplusTest.vcxproj", "{1436541D-F94D-4458-855E-8A2453A5CC39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -68,6 +70,22 @@ Global
 		{8456CB77-72B0-454A-B20A-180759EBCE5E}.Release|x64.Build.0 = Release(cutest)|x64
 		{8456CB77-72B0-454A-B20A-180759EBCE5E}.Release|x86.ActiveCfg = Release(cutest)|Win32
 		{8456CB77-72B0-454A-B20A-180759EBCE5E}.Release|x86.Build.0 = Release(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(cutest)|x64.ActiveCfg = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(cutest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(cutest)|x86.Build.0 = Debug(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug|x64.ActiveCfg = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug|x64.Build.0 = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug|x86.ActiveCfg = Debug(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug|x86.Build.0 = Debug(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.ActiveCfg = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x86.ActiveCfg = Release(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release|x64.ActiveCfg = Release(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release|x64.Build.0 = Release(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release|x86.ActiveCfg = Release(cutest)|Win32
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release|x86.Build.0 = Release(cutest)|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
