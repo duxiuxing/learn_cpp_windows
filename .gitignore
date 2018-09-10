@@ -33,6 +33,11 @@ source/gtest_static/*/Release*
 source/gtest_static/*/x64/Debug*
 source/gtest_static/*/x64/Release*
 
+source/network/sockets/*/Debug*
+source/network/sockets/*/Release*
+source/network/sockets/*/x64/Debug*
+source/network/sockets/*/x64/Release*
+
 source/runner/console/*/Debug*
 source/runner/console/*/Release*
 source/runner/console/*/x64/Debug*
