@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlFunctionsTest", "source\atl\functions\vs2015\AtlFunctionsTest.vcxproj", "{85038FE2-80EC-4142-BB76-D915695F2973}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlFunctionsTest", "source\test\atl_functions\vs2015\AtlFunctionsTest.vcxproj", "{85038FE2-80EC-4142-BB76-D915695F2973}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F} = {5E5AC592-F024-477E-B3D3-19D45DFD6C7F}
 	EndProjectSection
@@ -12,9 +12,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_static", "source\gtes
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleTestRunnerApp", "source\runner\console\vs2015\ConsoleTestRunnerApp.vcxproj", "{8456CB77-72B0-454A-B20A-180759EBCE5E}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GdiplusTest", "source\gdiplus\vs2015\GdiplusTest.vcxproj", "{1436541D-F94D-4458-855E-8A2453A5CC39}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GdiplusTest", "source\test\gdiplus\vs2015\GdiplusTest.vcxproj", "{1436541D-F94D-4458-855E-8A2453A5CC39}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketsTest", "source\network\sockets\vs2015\SocketsTest.vcxproj", "{85038FE2-80EC-4142-BB76-201809100716}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketsTest", "source\test\sockets\vs2015\SocketsTest.vcxproj", "{85038FE2-80EC-4142-BB76-201809100716}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MfcTestRunnerApp", "source\runner\mfc\vs2015\MfcTestRunnerApp.vcxproj", "{AABD35C3-3F4F-4CCC-AFF9-201605302224}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cutest runner", "cutest runner", "{33089E79-A533-4BEF-9C7F-8C68F6992E83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,14 +49,12 @@ Global
 		{85038FE2-80EC-4142-BB76-D915695F2973}.Release(gtest)|x86.ActiveCfg = Release(gtest)|Win32
 		{85038FE2-80EC-4142-BB76-D915695F2973}.Release(gtest)|x86.Build.0 = Release(gtest)|Win32
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(cutest)|x64.ActiveCfg = Debug(gtest)|x64
-		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(cutest)|x64.Build.0 = Debug(gtest)|x64
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(cutest)|x86.ActiveCfg = Debug(gtest)|Win32
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(gtest)|x64.ActiveCfg = Debug(gtest)|x64
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(gtest)|x64.Build.0 = Debug(gtest)|x64
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(gtest)|x86.ActiveCfg = Debug(gtest)|Win32
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Debug(gtest)|x86.Build.0 = Debug(gtest)|Win32
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Release(cutest)|x64.ActiveCfg = Release(gtest)|x64
-		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Release(cutest)|x64.Build.0 = Release(gtest)|x64
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Release(cutest)|x86.ActiveCfg = Release(gtest)|Win32
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Release(gtest)|x64.ActiveCfg = Release(gtest)|x64
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F}.Release(gtest)|x64.Build.0 = Release(gtest)|x64
@@ -76,8 +78,8 @@ Global
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(cutest)|x86.Build.0 = Debug(cutest)|Win32
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(gtest)|x64.ActiveCfg = Debug(cutest)|x64
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Debug(gtest)|x86.ActiveCfg = Debug(cutest)|Win32
-		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.ActiveCfg = Debug(cutest)|x64
-		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.ActiveCfg = Release(cutest)|x64
+		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x64.Build.0 = Release(cutest)|x64
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x86.ActiveCfg = Release(cutest)|Win32
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
 		{1436541D-F94D-4458-855E-8A2453A5CC39}.Release(gtest)|x64.ActiveCfg = Release(cutest)|x64
@@ -98,8 +100,24 @@ Global
 		{85038FE2-80EC-4142-BB76-201809100716}.Release(gtest)|x64.Build.0 = Release(gtest)|x64
 		{85038FE2-80EC-4142-BB76-201809100716}.Release(gtest)|x86.ActiveCfg = Release(gtest)|Win32
 		{85038FE2-80EC-4142-BB76-201809100716}.Release(gtest)|x86.Build.0 = Release(gtest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(cutest)|x64.ActiveCfg = Debug(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(cutest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(cutest)|x86.Build.0 = Debug(cutest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(gtest)|x64.ActiveCfg = Debug(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Debug(gtest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(cutest)|x64.ActiveCfg = Release(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(cutest)|x64.Build.0 = Release(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(cutest)|x86.ActiveCfg = Release(cutest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(gtest)|x64.ActiveCfg = Release(cutest)|x64
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224}.Release(gtest)|x86.ActiveCfg = Release(cutest)|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8456CB77-72B0-454A-B20A-180759EBCE5E} = {33089E79-A533-4BEF-9C7F-8C68F6992E83}
+		{AABD35C3-3F4F-4CCC-AFF9-201605302224} = {33089E79-A533-4BEF-9C7F-8C68F6992E83}
 	EndGlobalSection
 EndGlobal

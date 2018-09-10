@@ -2,4 +2,5 @@
 <root title="Learn C++ in Windows" platform="windows">
   <test libName="AtlFunctionsTest.dll" />
   <test libName="GdiplusTest.dll" />
+  <test libName="SocketsTest.dll" />
 </root>

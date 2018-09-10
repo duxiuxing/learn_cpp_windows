@@ -19,26 +19,32 @@ x64/Release(cutest)/*
 !*/cutest.lib
 !*/MfcTestRunnerApp.exe
 
-source/atl/functions/*/Debug*
-source/atl/functions/*/Release*
-source/atl/functions/*/x64/Debug*
-source/atl/functions/*/x64/Release*
-
-source/gdiplus/*/Debug*
-source/gdiplus/*/Release*
-source/gdiplus/*/x64/Debug*
-
 source/gtest_static/*/Debug*
 source/gtest_static/*/Release*
 source/gtest_static/*/x64/Debug*
 source/gtest_static/*/x64/Release*
 
-source/network/sockets/*/Debug*
-source/network/sockets/*/Release*
-source/network/sockets/*/x64/Debug*
-source/network/sockets/*/x64/Release*
+source/test/atl_functions/*/Debug*
+source/test/atl_functions/*/Release*
+source/test/atl_functions/*/x64/Debug*
+source/test/atl_functions/*/x64/Release*
+
+source/test/gdiplus/*/Debug*
+source/test/gdiplus/*/Release*
+source/test/gdiplus/*/x64/Debug*
+source/test/gdiplus/*/x64/Release*
+
+source/test/sockets/*/Debug*
+source/test/sockets/*/Release*
+source/test/sockets/*/x64/Debug*
+source/test/sockets/*/x64/Release*
 
 source/runner/console/*/Debug*
 source/runner/console/*/Release*
 source/runner/console/*/x64/Debug*
 source/runner/console/*/x64/Release*
+
+source/runner/mfc/*/Debug*
+source/runner/mfc/*/Release*
+source/runner/mfc/*/x64/Debug*
+source/runner/mfc/*/x64/Release*
