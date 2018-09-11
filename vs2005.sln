@@ -6,6 +6,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MfcTestRunnerApp", "source\
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC} = {C9B5CE26-3815-4F38-99A6-24918A5119CC}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cutest runner", "cutest runner", "{EDC6211D-1C29-412C-B573-CC4EEBD13D94}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -17,6 +20,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleTestRunnerApp", "sou
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC} = {C9B5CE26-3815-4F38-99A6-24918A5119CC}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gtest_static", "source\gtest_static\vs2005\gtest_static.vcproj", "{BE4D60DD-34AD-4F65-9C76-208DA70688C9}"
@@ -31,6 +37,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AtlFunctionsTest", "source\
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC} = {C9B5CE26-3815-4F38-99A6-24918A5119CC}
 		{BE4D60DD-34AD-4F65-9C76-208DA70688C9} = {BE4D60DD-34AD-4F65-9C76-208DA70688C9}
 	EndProjectSection
 EndProject
@@ -39,6 +46,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GdiplusTest", "source\test\
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
+	ProjectSection(ProjectDependencies) = postProject
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC} = {C9B5CE26-3815-4F38-99A6-24918A5119CC}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketsTest", "source\test\sockets\vs2005\SocketsTest.vcproj", "{CF8018D5-272D-4E43-9730-201809110389}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -46,7 +56,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketsTest", "source\test\
 		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 	ProjectSection(ProjectDependencies) = postProject
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC} = {C9B5CE26-3815-4F38-99A6-24918A5119CC}
 		{BE4D60DD-34AD-4F65-9C76-208DA70688C9} = {BE4D60DD-34AD-4F65-9C76-208DA70688C9}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PRE_BUILD", "source\pre_build\vs2005\PRE_BUILD.vcproj", "{C9B5CE26-3815-4F38-99A6-24918A5119CC}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
 	EndProjectSection
 EndProject
 Global
@@ -97,6 +114,14 @@ Global
 		{CF8018D5-272D-4E43-9730-201809110389}.Release(cutest)|Win32.Build.0 = Release(cutest)|Win32
 		{CF8018D5-272D-4E43-9730-201809110389}.Release(gtest)|Win32.ActiveCfg = Release(gtest)|Win32
 		{CF8018D5-272D-4E43-9730-201809110389}.Release(gtest)|Win32.Build.0 = Release(gtest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Debug(cutest)|Win32.ActiveCfg = Debug(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Debug(cutest)|Win32.Build.0 = Debug(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Debug(gtest)|Win32.ActiveCfg = Debug(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Debug(gtest)|Win32.Build.0 = Debug(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Release(cutest)|Win32.ActiveCfg = Release(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Release(cutest)|Win32.Build.0 = Release(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Release(gtest)|Win32.ActiveCfg = Release(cutest)|Win32
+		{C9B5CE26-3815-4F38-99A6-24918A5119CC}.Release(gtest)|Win32.Build.0 = Release(cutest)|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
