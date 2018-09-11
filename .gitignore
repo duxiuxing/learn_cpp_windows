@@ -1,7 +1,9 @@
 *.ipch
+*.ncb
 *.orig
 *.sdf
 *.suo
+*.user
 *.VC.db
 *.VC.opendb
 
