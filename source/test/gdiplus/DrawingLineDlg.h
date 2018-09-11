@@ -1,9 +1,8 @@
 #pragma once
 
-#include "afxdialogex.h"
 #include "resource.h"
 
-class CDrawingLineDlg : public CDialogEx
+class CDrawingLineDlg : public CDialog
 {
 	DECLARE_DYNAMIC(CDrawingLineDlg)
 

@@ -71,9 +71,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\GdiplusTest.ico">
-      <Filter>MFC DLL\Resource Files</Filter>
-    </Image>
     <Image Include="..\res\GdiplusTest.ico">
       <Filter>MFC DLL\Resource Files</Filter>
     </Image>

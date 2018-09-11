@@ -16,7 +16,7 @@
 	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="Debug|Win32"
+			Name="Debug(cutest)|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
@@ -44,7 +44,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\..\third_party\cppunit\include;..\..\..\third_party\googletest\include;..\..\..\third_party\cutest\include"
+				AdditionalIncludeDirectories="..\..\..\third_party\cutest\include"
 				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;OEMRESOURCE"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -101,7 +101,7 @@
 			/>
 		</Configuration>
 		<Configuration
-			Name="Release|Win32"
+			Name="Release(cutest)|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
@@ -333,7 +333,7 @@
 					RelativePath="..\stdafx.cpp"
 					>
 					<FileConfiguration
-						Name="Debug|Win32"
+						Name="Debug(cutest)|Win32"
 						>
 						<Tool
 							Name="VCCLCompilerTool"
@@ -341,7 +341,7 @@
 						/>
 					</FileConfiguration>
 					<FileConfiguration
-						Name="Release|Win32"
+						Name="Release(cutest)|Win32"
 						>
 						<Tool
 							Name="VCCLCompilerTool"

@@ -17,7 +17,6 @@ x64/Release(cutest)/*
 
 !*/cutest.dll
 !*/cutest.lib
-!*/MfcTestRunnerApp.exe
 
 source/gtest_static/*/Debug*
 source/gtest_static/*/Release*

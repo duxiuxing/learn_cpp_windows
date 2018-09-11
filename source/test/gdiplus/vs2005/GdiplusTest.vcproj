@@ -2,10 +2,10 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="8.00"
-	Name="ConsoleTestRunnerApp"
-	ProjectGUID="{554A7628-C55E-490C-98B8-0BA1E7CE1A84}"
-	RootNamespace="ConsoleTestRunnerApp"
-	Keyword="Win32Proj"
+	Name="GdiplusTest"
+	ProjectGUID="{D18A63FA-AF71-43EB-81FB-201809111524}"
+	RootNamespace="GdiplusTest"
+	Keyword="MFCDLLProj"
 	>
 	<Platforms>
 		<Platform
@@ -19,8 +19,8 @@
 			Name="Debug(cutest)|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfATL="1"
+			ConfigurationType="2"
+			UseOfMFC="2"
 			CharacterSet="1"
 			>
 			<Tool
@@ -37,12 +37,14 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
+				PreprocessorDefinitions="_DEBUG"
+				MkTypLibCompatible="false"
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="..\..\..\third_party\cutest\include"
-				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				PreprocessorDefinitions="WIN32;_WINDOWS;_DEBUG;_USRDLL"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="3"
@@ -56,6 +58,9 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -64,8 +69,9 @@
 				Name="VCLinkerTool"
 				LinkIncremental="2"
 				AdditionalLibraryDirectories="$(OutDir)"
+				ModuleDefinitionFile="..\GdiplusTest.def"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -97,8 +103,8 @@
 			Name="Release(cutest)|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
-			ConfigurationType="1"
-			UseOfATL="1"
+			ConfigurationType="2"
+			UseOfMFC="2"
 			CharacterSet="1"
 			WholeProgramOptimization="1"
 			>
@@ -116,12 +122,13 @@
 			/>
 			<Tool
 				Name="VCMIDLTool"
+				PreprocessorDefinitions="NDEBUG"
+				MkTypLibCompatible="false"
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="0"
 				AdditionalIncludeDirectories="..\..\..\third_party\cutest\include"
-				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				PreprocessorDefinitions="WIN32;_WINDOWS;NDEBUG;_USRDLL"
 				RuntimeLibrary="2"
 				UsePrecompiledHeader="2"
 				WarningLevel="3"
@@ -133,6 +140,9 @@
 			/>
 			<Tool
 				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+				AdditionalIncludeDirectories="$(IntDir)"
 			/>
 			<Tool
 				Name="VCPreLinkEventTool"
@@ -141,8 +151,9 @@
 				Name="VCLinkerTool"
 				LinkIncremental="1"
 				AdditionalLibraryDirectories="$(OutDir)"
+				ModuleDefinitionFile="..\GdiplusTest.def"
 				GenerateDebugInformation="true"
-				SubSystem="1"
+				SubSystem="2"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				TargetMachine="1"
@@ -177,56 +188,98 @@
 	</References>
 	<Files>
 		<Filter
-			Name="TestConfig"
+			Name="MFC DLL"
 			>
-			<File
-				RelativePath="..\TestConfig.h"
+			<Filter
+				Name="Header Files"
+				Filter="h;hpp;hxx;hm;inl;inc;xsd"
+				UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 				>
-			</File>
-			<File
-				RelativePath="..\TestConfigImpl.cpp"
+				<File
+					RelativePath="..\GdiplusTestApp.h"
+					>
+				</File>
+				<File
+					RelativePath="..\resource.h"
+					>
+				</File>
+				<File
+					RelativePath="..\stdafx.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Resource Files"
+				Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav"
+				UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
 				>
-			</File>
-			<File
-				RelativePath="..\TestConfigImpl.h"
+				<File
+					RelativePath="..\GdiplusTest.rc"
+					>
+				</File>
+				<File
+					RelativePath="..\res\GdiplusTest.rc2"
+					>
+				</File>
+				<File
+					RelativePath="..\res\GdiplusTest2005.ico"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Source Files"
+				Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+				UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 				>
-			</File>
+				<File
+					RelativePath="..\GdiplusTest.def"
+					>
+				</File>
+				<File
+					RelativePath="..\GdiplusTestApp.cpp"
+					>
+				</File>
+				<File
+					RelativePath="..\stdafx.cpp"
+					>
+					<FileConfiguration
+						Name="Debug(cutest)|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="1"
+						/>
+					</FileConfiguration>
+					<FileConfiguration
+						Name="Release(cutest)|Win32"
+						>
+						<Tool
+							Name="VCCLCompilerTool"
+							UsePrecompiledHeader="1"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
-			Name="Win32 Console Application"
+			Name="Getting Started"
 			>
 			<File
-				RelativePath="..\main.cpp"
+				RelativePath="..\GettingStarted.cpp"
 				>
 			</File>
-			<File
-				RelativePath="..\stdafx.cpp"
+			<Filter
+				Name="Drawing a Line"
 				>
-				<FileConfiguration
-					Name="Debug(cutest)|Win32"
+				<File
+					RelativePath="..\DrawingLineDlg.cpp"
 					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-				<FileConfiguration
-					Name="Release(cutest)|Win32"
+				</File>
+				<File
+					RelativePath="..\DrawingLineDlg.h"
 					>
-					<Tool
-						Name="VCCLCompilerTool"
-						UsePrecompiledHeader="1"
-					/>
-				</FileConfiguration>
-			</File>
-			<File
-				RelativePath="..\stdafx.h"
-				>
-			</File>
-			<File
-				RelativePath="..\targetver.h"
-				>
-			</File>
+				</File>
+			</Filter>
 		</Filter>
 	</Files>
 	<Globals>
