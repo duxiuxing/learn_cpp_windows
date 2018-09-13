@@ -65,8 +65,9 @@ TEST(WinSockTest, inet_ntoa) {
 /*
     TestedMethod: inet_ntoa()
     Description: inet_ntoa()返回值的有效性问题
+        - inet_ntoa()每次返回的char*都指向同一段内存空间；
+        - 应该用std::string或者CString这样的封装类来缓存inet_ntoa()的返回值。
 */
-
 TEST(WinSockTest, inet_ntoa_return_value) {
     char* ip_string1 = NULL;
     char* ip_string2 = NULL;
@@ -97,6 +98,7 @@ TEST(WinSockTest, inet_ntoa_return_value) {
     EXPECT_STRNE(ip_string11.c_str(), ip_string22.c_str());
 
     // inet_ntoa()的返回值总是指向一段固定的内存空间
+    // 所以在进行ip_string2转换的时候，ip_string1指向的字符串内容也发生了变化
     EXPECT_STREQ(ip_string1, ip_string2);
     EXPECT_EQ(ip_string1, ip_string2);
 }
