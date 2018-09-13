@@ -4,55 +4,70 @@
 #include <WS2tcpip.h>
 
 /*
-    TestedMethod:
+    TestedMethod: InetPton() / inet_addr()
     Description:
-    Output:
+        - VS2010以后，可以使用InetPton()来把字符串格式的IP地址转成数字
+        - VS2005可以使用inet_addr()来进行转换
 */
-TEST(WinSockTest, IpAddressStringToNumber) {
-    DWORD ip_expect = 16820416;
-    DWORD ip_number = 0;
-
 #if _MSC_VER >= 1600
+
+TEST(WinSockTest, InetPton) {
     TCHAR ip_string[] = _T("192.168.0.1");
 
     in_addr ip_address;
     InetPton(AF_INET, ip_string, &ip_address);
-    ip_number = ip_address.s_addr;
-#else // VS2005
-    char ip_string[] = "192.168.0.1";
-    ip_number = inet_addr(ip_string);
-#endif
+    DWORD ip_number = ip_address.s_addr;
 
-    EXPECT_EQ(ip_expect, ip_number);
+    EXPECT_EQ(16820416, ip_number);
 }
 
+#else // VS2005
+
+TEST(WinSockTest, inet_addr) {
+    char ip_string[] = "192.168.0.1";
+
+    DWORD ip_number = inet_addr(ip_string);
+
+    EXPECT_EQ(16820416, ip_number);
+}
+
+#endif
+
 /*
-    TestedMethod:
+    TestedMethod: InetNtop() / inet_ntoa()
     Description:
-    Output:
+        - VS2010以后，可以使用InetNtop()来把数字的IP地址转成字符串格式
+        - VS2005可以使用inet_ntoa()来进行转换
 */
-TEST(WinSockTest, IpAddressNumberToString) {
+#if _MSC_VER >= 1600
+
+TEST(WinSockTest, InetNtop) {
     DWORD ip_number = 16820416;
+
     in_addr ip_address;
     ip_address.s_addr = ip_number;
-
-#if _MSC_VER >= 1600
     TCHAR ip_string[INET_ADDRSTRLEN] = {0};
     InetNtop(AF_INET, &ip_address, ip_string, INET_ADDRSTRLEN);
-#else // VS2005
-    CString ip_string(inet_ntoa(ip_address));
-#endif
 
     EXPECT_STREQ(_T("192.168.0.1"), ip_string);
 }
 
-/*
-    TestedMethod:
-    Description:
-    Output:
-*/
-#if _MSC_VER == 1400 // VS2005
+#else // VS2005
+
 TEST(WinSockTest, inet_ntoa) {
+    DWORD ip_number = 16820416;
+
+    std::string ip_string(inet_ntoa(ip_address));
+
+    EXPECT_STREQ("192.168.0.1", ip_string);
+}
+
+/*
+    TestedMethod: inet_ntoa()
+    Description: inet_ntoa()返回值的有效性问题
+*/
+
+TEST(WinSockTest, inet_ntoa_return_value) {
     char* ip_string1 = NULL;
     char* ip_string2 = NULL;
 
@@ -85,4 +100,5 @@ TEST(WinSockTest, inet_ntoa) {
     EXPECT_STREQ(ip_string1, ip_string2);
     EXPECT_EQ(ip_string1, ip_string2);
 }
+
 #endif
