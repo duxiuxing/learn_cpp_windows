@@ -36,6 +36,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cutest runner", "cutest run
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PRE_BUILD", "source\pre_build\vs2015\PRE_BUILD.vcxproj", "{236D4AC4-1965-49E4-98AD-135EB6F03CCE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicTypesTest", "source\test\basic_types_test\vs2015\BasicTypesTest.vcxproj", "{85038FE2-80EC-4142-BB76-201809161805}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F} = {5E5AC592-F024-477E-B3D3-19D45DFD6C7F}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug(cutest)|x64 = Debug(cutest)|x64
@@ -140,6 +145,22 @@ Global
 		{236D4AC4-1965-49E4-98AD-135EB6F03CCE}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
 		{236D4AC4-1965-49E4-98AD-135EB6F03CCE}.Release(gtest)|x64.ActiveCfg = Release(cutest)|x64
 		{236D4AC4-1965-49E4-98AD-135EB6F03CCE}.Release(gtest)|x86.ActiveCfg = Release(cutest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(cutest)|x64.ActiveCfg = Debug(cutest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(cutest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(cutest)|x86.Build.0 = Debug(cutest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(gtest)|x64.ActiveCfg = Debug(gtest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(gtest)|x64.Build.0 = Debug(gtest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(gtest)|x86.ActiveCfg = Debug(gtest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Debug(gtest)|x86.Build.0 = Debug(gtest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(cutest)|x64.ActiveCfg = Release(cutest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(cutest)|x64.Build.0 = Release(cutest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(cutest)|x86.ActiveCfg = Release(cutest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x64.ActiveCfg = Release(gtest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x64.Build.0 = Release(gtest)|x64
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x86.ActiveCfg = Release(gtest)|Win32
+		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x86.Build.0 = Release(gtest)|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

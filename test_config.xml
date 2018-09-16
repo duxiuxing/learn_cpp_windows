@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root title="Windows C++编程演练" platform="windows">
   <test libName="AtlFunctionsTest.dll" />
+  <test libName="BasicTypesTest.dll" />
   <test libName="GdiplusTest.dll" />
   <test libName="SocketsTest.dll" />
 </root>

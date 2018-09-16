@@ -35,11 +35,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{85038FE2-80EC-4142-BB76-201809100716}</ProjectGuid>
+    <ProjectGuid>{85038FE2-80EC-4142-BB76-201809161805}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>atl_functions</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>SocketsTest</ProjectName>
+    <ProjectName>BasicTypesTest</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug(gtest)|Win32'" Label="Configuration">
@@ -315,7 +315,7 @@
     <ClInclude Include="..\targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\winsock_test.cpp" />
+    <ClCompile Include="..\bool_test.cpp" />
     <ClCompile Include="..\dllmain.cpp" />
     <ClCompile Include="..\gtest_main.cc" />
     <ClCompile Include="..\stdafx.cpp">
