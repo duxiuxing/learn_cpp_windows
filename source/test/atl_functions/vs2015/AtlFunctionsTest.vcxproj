@@ -292,6 +292,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\atlpath_test.cpp" />
+    <ClCompile Include="..\atlpath_test_from_msdn.cpp" />
     <ClCompile Include="..\dllmain.cpp" />
     <ClCompile Include="..\gtest_main.cc" />
     <ClCompile Include="..\stdafx.cpp">

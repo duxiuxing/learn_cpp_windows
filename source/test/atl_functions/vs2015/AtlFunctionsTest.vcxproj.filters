@@ -29,5 +29,8 @@
     <ClCompile Include="..\dllmain.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\atlpath_test_from_msdn.cpp">
+      <Filter>Test</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
