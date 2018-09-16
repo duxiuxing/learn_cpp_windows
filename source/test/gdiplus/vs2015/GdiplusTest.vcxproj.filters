@@ -39,6 +39,9 @@
     <ClCompile Include="..\GettingStarted.cpp">
       <Filter>Getting Started</Filter>
     </ClCompile>
+    <ClCompile Include="..\DrawingStringDlg.cpp">
+      <Filter>Getting Started\Drawing a String</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stdafx.h">
@@ -55,6 +58,9 @@
     </ClInclude>
     <ClInclude Include="..\GdiplusTestApp.h">
       <Filter>MFC DLL\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DrawingStringDlg.h">
+      <Filter>Getting Started\Drawing a String</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

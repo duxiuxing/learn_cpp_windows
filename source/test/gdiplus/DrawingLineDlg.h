@@ -10,8 +10,8 @@ public:
 	CDrawingLineDlg(CWnd* pParent = NULL);   // standard constructor
 	virtual ~CDrawingLineDlg();
 
-// Dialog Data
-	enum { IDD = IDD_DRAWING_LINE };
+	// Dialog Data
+	enum {IDD = IDD_DRAWING_LINE};
 
 protected:
 	DECLARE_MESSAGE_MAP()
