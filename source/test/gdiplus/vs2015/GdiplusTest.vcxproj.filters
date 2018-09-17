@@ -31,6 +31,15 @@
     <Filter Include="02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles">
       <UniqueIdentifier>{ebea7e6e-c068-422c-bfa1-22b7b1b82b93}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{0a940750-9261-41e4-b213-9a68b6c57bd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Using Images, Bitmaps, and Metafiles">
+      <UniqueIdentifier>{1b2973af-f999-4af3-b4b3-0f196b964065}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps">
+      <UniqueIdentifier>{671f43b1-e2d4-4eb8-a2fd-a61939216da3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">
@@ -54,6 +63,18 @@
     <ClCompile Include="..\UsingPen.cpp">
       <Filter>02.Using a Pen to Draw Lines and Rectangles</Filter>
     </ClCompile>
+    <ClCompile Include="..\Helper.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DrawJpegDlg.cpp">
+      <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UsingImage.cpp">
+      <Filter>04.Using Images, Bitmaps, and Metafiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DrawIconDlg.cpp">
+      <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stdafx.h">
@@ -76,6 +97,15 @@
     </ClInclude>
     <ClInclude Include="..\DrawRectangleDlg.h">
       <Filter>02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Helper.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DrawJpegDlg.h">
+      <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DrawIconDlg.h">
+      <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

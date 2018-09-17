@@ -202,24 +202,31 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\DrawIconDlg.cpp" />
+    <ClCompile Include="..\DrawJpegDlg.cpp" />
     <ClCompile Include="..\DrawLineDlg.cpp" />
     <ClCompile Include="..\DrawStringDlg.cpp" />
     <ClCompile Include="..\DrawRectangleDlg.cpp" />
     <ClCompile Include="..\GettingStarted.cpp" />
     <ClCompile Include="..\GdiplusTestApp.cpp" />
+    <ClCompile Include="..\Helper.cpp" />
     <ClCompile Include="..\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(cutest)|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(cutest)|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\UsingImage.cpp" />
     <ClCompile Include="..\UsingPen.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\DrawIconDlg.h" />
+    <ClInclude Include="..\DrawJpegDlg.h" />
     <ClInclude Include="..\DrawLineDlg.h" />
     <ClInclude Include="..\DrawStringDlg.h" />
     <ClInclude Include="..\DrawRectangleDlg.h" />
     <ClInclude Include="..\GdiplusTestApp.h" />
+    <ClInclude Include="..\Helper.h" />
     <ClInclude Include="..\resource.h" />
     <ClInclude Include="..\stdafx.h" />
     <ClInclude Include="..\targetver.h" />
