@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Getting Started">
-      <UniqueIdentifier>{434aedb3-8afb-4e91-adc3-fad08333d1c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Getting Started\Drawing a Line">
-      <UniqueIdentifier>{cad41b40-ef21-4cfc-8ea6-b22a8c620bc9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Getting Started\Drawing a String">
-      <UniqueIdentifier>{8eaec7d7-610d-4c2d-970f-eba921f164ae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MFC DLL">
       <UniqueIdentifier>{56a8e8d1-4d54-4b10-9f5a-d19c625c255b}</UniqueIdentifier>
     </Filter>
@@ -25,22 +16,43 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
+    <Filter Include="01.Getting Started">
+      <UniqueIdentifier>{434aedb3-8afb-4e91-adc3-fad08333d1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Using a Pen to Draw Lines and Rectangles">
+      <UniqueIdentifier>{c7579fe7-5bd3-44a9-95f4-55358bb83aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Getting Started\a.Drawing a Line">
+      <UniqueIdentifier>{cad41b40-ef21-4cfc-8ea6-b22a8c620bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Getting Started\b.Drawing a String">
+      <UniqueIdentifier>{8eaec7d7-610d-4c2d-970f-eba921f164ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles">
+      <UniqueIdentifier>{ebea7e6e-c068-422c-bfa1-22b7b1b82b93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">
       <Filter>MFC DLL\Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\DrawingLineDlg.cpp">
-      <Filter>Getting Started\Drawing a Line</Filter>
+    <ClCompile Include="..\DrawLineDlg.cpp">
+      <Filter>01.Getting Started\a.Drawing a Line</Filter>
     </ClCompile>
     <ClCompile Include="..\GdiplusTestApp.cpp">
       <Filter>MFC DLL\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\GettingStarted.cpp">
-      <Filter>Getting Started</Filter>
+      <Filter>01.Getting Started</Filter>
     </ClCompile>
-    <ClCompile Include="..\DrawingStringDlg.cpp">
-      <Filter>Getting Started\Drawing a String</Filter>
+    <ClCompile Include="..\DrawStringDlg.cpp">
+      <Filter>01.Getting Started\b.Drawing a String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DrawRectangleDlg.cpp">
+      <Filter>02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\UsingPen.cpp">
+      <Filter>02.Using a Pen to Draw Lines and Rectangles</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -53,14 +65,17 @@
     <ClInclude Include="..\targetver.h">
       <Filter>MFC DLL\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\DrawingLineDlg.h">
-      <Filter>Getting Started\Drawing a Line</Filter>
+    <ClInclude Include="..\DrawLineDlg.h">
+      <Filter>01.Getting Started\a.Drawing a Line</Filter>
     </ClInclude>
     <ClInclude Include="..\GdiplusTestApp.h">
       <Filter>MFC DLL\Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\DrawingStringDlg.h">
-      <Filter>Getting Started\Drawing a String</Filter>
+    <ClInclude Include="..\DrawStringDlg.h">
+      <Filter>01.Getting Started\b.Drawing a String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DrawRectangleDlg.h">
+      <Filter>02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

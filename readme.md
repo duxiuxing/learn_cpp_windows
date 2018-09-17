@@ -7,14 +7,14 @@
 ## [Using GDI+](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-gdi--use)
 - [Getting Started](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-getting-started-use)
   - [Drawing a Line](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-drawing-a-line-use)
-  > 用例位置：GettingStarted.DrawingLine
+  > 用例位置：GettingStarted.DrawLine
   - [Drawing a String](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-drawing-a-string-use)
-  > 用例位置：GettingStarted.DrawingString
+  > 用例位置：GettingStarted.DrawString
 
 - [Using a Pen to Draw Lines and Shapes](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-shapes-use)
   - [Using a Pen to Draw Lines and Rectangles](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-rectangles-use)
   > 用例位置：
-    - GettingStarted.DrawingLine
+    - GettingStarted.DrawLine
     - UsingPen.DrawRectangle
   - [Setting Pen Width and Alignment](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-setting-pen-width-and-alignment-use)
 

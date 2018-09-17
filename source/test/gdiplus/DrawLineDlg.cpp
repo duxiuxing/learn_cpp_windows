@@ -1,23 +1,23 @@
 #include "stdafx.h"
-#include "DrawingLineDlg.h"
+#include "DrawLineDlg.h"
 
 #include <gdiplus.h>
 using namespace Gdiplus;
 
-IMPLEMENT_DYNAMIC(CDrawingLineDlg, CDialog)
+IMPLEMENT_DYNAMIC(CDrawLineDlg, CDialog)
 
-CDrawingLineDlg::CDrawingLineDlg(CWnd* pParent /*=NULL*/)
-	: CDialog(CDrawingLineDlg::IDD, pParent)
+CDrawLineDlg::CDrawLineDlg(CWnd* pParent /*=NULL*/)
+	: CDialog(CDrawLineDlg::IDD, pParent)
 {}
 
-CDrawingLineDlg::~CDrawingLineDlg()
+CDrawLineDlg::~CDrawLineDlg()
 {}
 
-BEGIN_MESSAGE_MAP(CDrawingLineDlg, CDialog)
+BEGIN_MESSAGE_MAP(CDrawLineDlg, CDialog)
 	ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void CDrawingLineDlg::OnPaint()
+void CDrawLineDlg::OnPaint()
 {
 	CPaintDC dc(this);
 	Graphics graphics(dc.GetSafeHdc());

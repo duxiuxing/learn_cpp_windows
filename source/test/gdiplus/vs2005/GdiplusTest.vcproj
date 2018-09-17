@@ -273,11 +273,11 @@
 				Name="Drawing a Line"
 				>
 				<File
-					RelativePath="..\DrawingLineDlg.cpp"
+					RelativePath="..\DrawLineDlg.cpp"
 					>
 				</File>
 				<File
-					RelativePath="..\DrawingLineDlg.h"
+					RelativePath="..\DrawLineDlg.h"
 					>
 				</File>
 			</Filter>
