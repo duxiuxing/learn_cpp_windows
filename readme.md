@@ -13,6 +13,9 @@
 
 - [Using a Pen to Draw Lines and Shapes](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-shapes-use)
   - [Using a Pen to Draw Lines and Rectangles](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-rectangles-use)
+  > 用例位置：
+    - GettingStarted.DrawingLine
+    - UsingPen.DrawRectangle
   - [Setting Pen Width and Alignment](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-setting-pen-width-and-alignment-use)
 
 ## 网络编程
