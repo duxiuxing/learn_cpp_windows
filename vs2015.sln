@@ -36,7 +36,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "cutest runner", "cutest run
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PRE_BUILD", "source\pre_build\vs2015\PRE_BUILD.vcxproj", "{236D4AC4-1965-49E4-98AD-135EB6F03CCE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicTypesTest", "source\test\basic_types_test\vs2015\BasicTypesTest.vcxproj", "{85038FE2-80EC-4142-BB76-201809161805}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicTypesTest", "source\test\basic_types\vs2015\BasicTypesTest.vcxproj", "{85038FE2-80EC-4142-BB76-201809161805}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F} = {5E5AC592-F024-477E-B3D3-19D45DFD6C7F}
 	EndProjectSection
