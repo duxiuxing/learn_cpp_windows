@@ -12,23 +12,23 @@
 #if _MSC_VER >= 1600
 
 TEST(WinSockTest, InetPton) {
-    TCHAR ip_string[] = _T("192.168.0.1");
+    TCHAR ipString[] = _T("192.168.0.1");
 
-    in_addr ip_address;
-    InetPton(AF_INET, ip_string, &ip_address);
-    DWORD ip_number = ip_address.s_addr;
+    in_addr ipAddress;
+    InetPton(AF_INET, ipString, &ipAddress);
+    DWORD ipNumber = ipAddress.s_addr;
 
-    EXPECT_EQ(16820416, ip_number);
+    EXPECT_EQ(16820416, ipNumber);
 }
 
 #else // VS2005
 
 TEST(WinSockTest, inet_addr) {
-    char ip_string[] = "192.168.0.1";
+    char ipString[] = "192.168.0.1";
 
-    DWORD ip_number = inet_addr(ip_string);
+    DWORD ipNumber = inet_addr(ipString);
 
-    EXPECT_EQ(16820416, ip_number);
+    EXPECT_EQ(16820416, ipNumber);
 }
 
 #endif
@@ -42,24 +42,24 @@ TEST(WinSockTest, inet_addr) {
 #if _MSC_VER >= 1600
 
 TEST(WinSockTest, InetNtop) {
-    DWORD ip_number = 16820416;
+    DWORD ipNumber = 16820416;
 
-    in_addr ip_address;
-    ip_address.s_addr = ip_number;
-    TCHAR ip_string[INET_ADDRSTRLEN] = {0};
-    InetNtop(AF_INET, &ip_address, ip_string, INET_ADDRSTRLEN);
+    in_addr ipAddress;
+    ipAddress.s_addr = ipNumber;
+    TCHAR ipString[INET_ADDRSTRLEN] = {0};
+    InetNtop(AF_INET, &ipAddress, ipString, INET_ADDRSTRLEN);
 
-    EXPECT_STREQ(_T("192.168.0.1"), ip_string);
+    EXPECT_STREQ(_T("192.168.0.1"), ipString);
 }
 
 #else // VS2005
 
 TEST(WinSockTest, inet_ntoa) {
-    DWORD ip_number = 16820416;
+    DWORD ipNumber = 16820416;
 
-    std::string ip_string(inet_ntoa(ip_address));
+    std::string ipString(inet_ntoa(ipAddress));
 
-    EXPECT_STREQ("192.168.0.1", ip_string);
+    EXPECT_STREQ("192.168.0.1", ipString);
 }
 
 /*
@@ -69,38 +69,38 @@ TEST(WinSockTest, inet_ntoa) {
         - 应该用std::string或者CString这样的封装类来缓存inet_ntoa()的返回值。
 */
 TEST(WinSockTest, inet_ntoa_return_value) {
-    char* ip_string1 = NULL;
-    char* ip_string2 = NULL;
+    char* ipString1 = NULL;
+    char* ipString2 = NULL;
 
-    std::string ip_string11;
-    std::string ip_string22;
+    std::string ipString11;
+    std::string ipString22;
 
     {
-        DWORD ip_number = 16820416; // 192.168.0.1
-        in_addr ip_address;
-        ip_address.s_addr = ip_number;
-        ip_string1 = inet_ntoa(ip_address);
-        ip_string11 = inet_ntoa(ip_address);
-        EXPECT_STREQ("192.168.0.1", ip_string1);
-        EXPECT_STREQ("192.168.0.1", ip_string11.c_str());
+        DWORD ipNumber = 16820416; // 192.168.0.1
+        in_addr ipAddress;
+        ipAddress.s_addr = ipNumber;
+        ipString1 = inet_ntoa(ipAddress);
+        ipString11 = inet_ntoa(ipAddress);
+        EXPECT_STREQ("192.168.0.1", ipString1);
+        EXPECT_STREQ("192.168.0.1", ipString11.c_str());
     }
 
     {
-        DWORD ip_number = 33597632; // 192.168.0.2
-        in_addr ip_address;
-        ip_address.s_addr = ip_number;
-        ip_string2 = inet_ntoa(ip_address);
-        ip_string22 = inet_ntoa(ip_address);
-        EXPECT_STREQ("192.168.0.2", ip_string2);
-        EXPECT_STREQ("192.168.0.2", ip_string22.c_str());
+        DWORD ipNumber = 33597632; // 192.168.0.2
+        in_addr ipAddress;
+        ipAddress.s_addr = ipNumber;
+        ipString2 = inet_ntoa(ipAddress);
+        ipString22 = inet_ntoa(ipAddress);
+        EXPECT_STREQ("192.168.0.2", ipString2);
+        EXPECT_STREQ("192.168.0.2", ipString22.c_str());
     }
 
-    EXPECT_STRNE(ip_string11.c_str(), ip_string22.c_str());
+    EXPECT_STRNE(ipString11.c_str(), ipString22.c_str());
 
     // inet_ntoa()的返回值总是指向一段固定的内存空间
-    // 所以在进行ip_string2转换的时候，ip_string1指向的字符串内容也发生了变化
-    EXPECT_STREQ(ip_string1, ip_string2);
-    EXPECT_EQ(ip_string1, ip_string2);
+    // 所以在进行ipString2转换的时候，ipString1指向的字符串内容也发生了变化
+    EXPECT_STREQ(ipString1, ipString2);
+    EXPECT_EQ(ipString1, ipString2);
 }
 
 #endif
