@@ -60,9 +60,6 @@
     <ClCompile Include="..\draw_rectangle_dlg.cpp">
       <Filter>02.Using a Pen to Draw Lines and Rectangles\a.Using a Pen to Draw Lines and Rectangles</Filter>
     </ClCompile>
-    <ClCompile Include="..\UsingPen.cpp">
-      <Filter>02.Using a Pen to Draw Lines and Rectangles</Filter>
-    </ClCompile>
     <ClCompile Include="..\helper.cpp">
       <Filter>Helper</Filter>
     </ClCompile>
@@ -74,6 +71,9 @@
     </ClCompile>
     <ClCompile Include="..\draw_icon_dlg.cpp">
       <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\using_pen.cpp">
+      <Filter>MFC DLL\Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

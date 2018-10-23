@@ -8,5 +8,5 @@
 *.VC.db
 *.VC.opendb
 
-Debug*
-Release*
+Debug(*)
+Release(*)
