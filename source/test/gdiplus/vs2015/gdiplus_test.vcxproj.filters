@@ -40,6 +40,18 @@
     <Filter Include="04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps">
       <UniqueIdentifier>{671f43b1-e2d4-4eb8-a2fd-a61939216da3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05.Using Image Encoders and Decoders">
+      <UniqueIdentifier>{f25fe129-2f67-4868-9295-9ca6334a320c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Using Image Encoders and Decoders\a.Listing Installed Encoders">
+      <UniqueIdentifier>{dd75e0f0-1f77-4cf7-a18d-12f9b05fcaa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Using Image Encoders and Decoders\b.Listing Installed Decoders">
+      <UniqueIdentifier>{49a20366-d3bc-4808-bb7e-229f707269dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Using Image Encoders and Decoders\c.Retrieving the Class Identifier for an Encoder">
+      <UniqueIdentifier>{68616254-fc1c-44b4-8d69-c1ed25a79911}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">
@@ -74,6 +86,15 @@
     </ClCompile>
     <ClCompile Include="..\using_pen.cpp">
       <Filter>MFC DLL\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\installed_encoders.cpp">
+      <Filter>05.Using Image Encoders and Decoders\a.Listing Installed Encoders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\installed_decoders.cpp">
+      <Filter>05.Using Image Encoders and Decoders\b.Listing Installed Decoders</Filter>
+    </ClCompile>
+    <ClCompile Include="..\encoder_clsid.cpp">
+      <Filter>05.Using Image Encoders and Decoders\c.Retrieving the Class Identifier for an Encoder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

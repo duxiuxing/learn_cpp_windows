@@ -14,7 +14,7 @@ CDrawJpegDlg::CDrawJpegDlg(CWnd* pParent /*=NULL*/)
 	, m_image(NULL)
 {
 	ATL::CPath jpegFile;
-	BOOL jpegFileExist = GdiplusTest::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFile);
+	BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFile);
 	EXPECT_EQ(TRUE, jpegFileExist);
 
 	if (jpegFileExist)

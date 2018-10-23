@@ -208,9 +208,12 @@
     <ClCompile Include="..\draw_line_dlg.cpp" />
     <ClCompile Include="..\draw_string_dlg.cpp" />
     <ClCompile Include="..\draw_rectangle_dlg.cpp" />
+    <ClCompile Include="..\encoder_clsid.cpp" />
     <ClCompile Include="..\getting_started.cpp" />
     <ClCompile Include="..\dll_app.cpp" />
     <ClCompile Include="..\helper.cpp" />
+    <ClCompile Include="..\installed_decoders.cpp" />
+    <ClCompile Include="..\installed_encoders.cpp" />
     <ClCompile Include="..\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|x64'">Create</PrecompiledHeader>
