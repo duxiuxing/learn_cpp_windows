@@ -57,9 +57,11 @@ TEST(WinSockTest, InetNtop) {
 TEST(WinSockTest, inet_ntoa) {
     DWORD ipNumber = 16820416;
 
+	in_addr ipAddress;
+	ipAddress.s_addr = ipNumber;
     std::string ipString(inet_ntoa(ipAddress));
 
-    EXPECT_STREQ("192.168.0.1", ipString);
+    EXPECT_STREQ("192.168.0.1", ipString.c_str());
 }
 
 /*

@@ -1,7 +1,10 @@
 ﻿#pragma once
 
 #include <cppunit/TestFixture.h>
-#include "cutest/MfcDialogTest.h"
+
+#ifdef _MSC_VER
+
+#include "cutest/mfc_dialog_test.h"
 
 CPPUNIT_NS_BEGIN
 
@@ -19,3 +22,5 @@ private:
 };
 
 CPPUNIT_NS_END
+
+#endif // #ifdef _MSC_VER
