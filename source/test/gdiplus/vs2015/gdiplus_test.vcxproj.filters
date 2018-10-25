@@ -93,9 +93,6 @@
     <ClCompile Include="..\encoder_clsid.cpp">
       <Filter>05.Using Image Encoders and Decoders\c.Retrieving the Class Identifier for an Encoder</Filter>
     </ClCompile>
-    <ClCompile Include="..\encoder_parameters.cpp">
-      <Filter>05.Using Image Encoders and Decoders\d.Determining the Parameters Supported by an Encoder</Filter>
-    </ClCompile>
     <ClCompile Include="..\get_image_encoders.cpp">
       <Filter>05.Using Image Encoders and Decoders\a.Listing Installed Encoders</Filter>
     </ClCompile>
@@ -103,6 +100,9 @@
       <Filter>05.Using Image Encoders and Decoders\b.Listing Installed Decoders</Filter>
     </ClCompile>
     <ClCompile Include="..\image_codec_info_test.cpp">
+      <Filter>05.Using Image Encoders and Decoders\d.Determining the Parameters Supported by an Encoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\encoder_parameter_test.cpp">
       <Filter>05.Using Image Encoders and Decoders\d.Determining the Parameters Supported by an Encoder</Filter>
     </ClCompile>
   </ItemGroup>
