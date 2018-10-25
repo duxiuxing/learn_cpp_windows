@@ -212,9 +212,10 @@
     <ClCompile Include="..\encoder_parameters.cpp" />
     <ClCompile Include="..\getting_started.cpp" />
     <ClCompile Include="..\dll_app.cpp" />
+    <ClCompile Include="..\get_image_decoders.cpp" />
     <ClCompile Include="..\helper.cpp" />
-    <ClCompile Include="..\installed_decoders.cpp" />
-    <ClCompile Include="..\installed_encoders.cpp" />
+    <ClCompile Include="..\get_image_encoders.cpp" />
+    <ClCompile Include="..\image_codec_info_test.cpp" />
     <ClCompile Include="..\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug(cutest)|x64'">Create</PrecompiledHeader>

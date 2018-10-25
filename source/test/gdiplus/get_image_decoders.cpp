@@ -6,13 +6,13 @@ using namespace Gdiplus;
 #include "gtest/gtest.h"
 #include <vector>
 
-TEST(ImageCoders, InstalledDecoders) {
-    UINT num = 0;   // number of image decoders
-    UINT size = 0;  // size, in bytes, of the image decoder array
+TEST(UsingImageDecoders, GetImageDecoders) {
+    UINT numDecoders = 0;   // number of image decoders
+    UINT size = 0;          // size, in bytes, of the image decoder array
 
     // How many decoders are there?
     // How big (in bytes) is the array of all ImageCodecInfo objects?
-    GetImageDecodersSize(&num, &size);
+    GetImageDecodersSize(&numDecoders, &size);
 
     // Create a buffer large enough to hold the array of ImageCodecInfo
     // objects that will be returned by GetImageDecoders.
@@ -21,17 +21,11 @@ TEST(ImageCoders, InstalledDecoders) {
     // GetImageDecoders creates an array of ImageCodecInfo objects
     // and copies that array into a previously allocated buffer.
     // The third argument, imageCodecInfo, is a pointer to that buffer.
-    GetImageDecoders(num, size, pImageCodecInfo);
+    GetImageDecoders(numDecoders, size, pImageCodecInfo);
 
-    // Save the graphics file format (MimeType)
+    // Check the graphics file format (MimeType)
     // for each ImageCodecInfo object.
-    std::vector<std::wstring> actualDecoders;
-    for (UINT j = 0; j < num; ++j) {
-        actualDecoders.push_back(pImageCodecInfo[j].MimeType);
-    }
-    sort(actualDecoders.begin(), actualDecoders.end());
-
-    std::wstring decoders[] = {
+    WCHAR* allMimeTypes[] = {
         L"image/bmp",
         L"image/jpeg",
         L"image/gif",
@@ -41,11 +35,9 @@ TEST(ImageCoders, InstalledDecoders) {
         L"image/png",
         L"image/x-icon"
     };
-    size_t decoderCount = sizeof(decoders) / sizeof(decoders[0]);
-    std::vector<std::wstring> expectDecoders(decoders, decoders + decoderCount);
-    sort(expectDecoders.begin(), expectDecoders.end());
-
-    EXPECT_TRUE(expectDecoders == actualDecoders);
+    for (UINT j = 0; j < numDecoders; ++j) {
+        EXPECT_STREQ(allMimeTypes[j], pImageCodecInfo[j].MimeType);
+    }
 
     free(pImageCodecInfo);
 }

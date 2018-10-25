@@ -29,9 +29,9 @@ BOOL Helper::GetResourceFileFullPath(PTSTR fileRelativePath, ATL::CPath& fileFul
 }
 
 INT Helper::GetEncoderClsid(const WCHAR* format, CLSID* pClsid) {
-    UINT num = 0;   // number of image encoders
+    UINT numEncoders = 0;   // number of image encoders
     UINT size = 0;  // size of the image encoder array in bytes
-    GetImageEncodersSize(&num, &size);
+    GetImageEncodersSize(&numEncoders, &size);
     if (size == 0) {
         return -1; // Failure
     }
@@ -41,9 +41,9 @@ INT Helper::GetEncoderClsid(const WCHAR* format, CLSID* pClsid) {
         return -1; // Failure
     }
 
-    GetImageEncoders(num, size, pImageCodecInfo);
+    GetImageEncoders(numEncoders, size, pImageCodecInfo);
 
-    for (UINT j = 0; j < num; ++j) {
+    for (UINT j = 0; j < numEncoders; ++j) {
         if (wcscmp(pImageCodecInfo[j].MimeType, format) == 0) {
             *pClsid = pImageCodecInfo[j].Clsid;
             free(pImageCodecInfo);

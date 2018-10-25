@@ -18,15 +18,15 @@
 
 | 代码位置 | VS2005 | VS2010 | VS2015 | 微软文档 |
 |---------|:------:|:------:|:------:|---------|
-| GettingStarted.DrawLine <br/> UsingPen.DrawRectangle |  |  | √ | [Using a Pen to Draw Lines and Rectangles](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-rectangles-use) |
+| 1.GettingStarted.DrawLine <br/> 2.UsingPen.DrawRectangle |  |  | √ | [Using a Pen to Draw Lines and Rectangles](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-rectangles-use) |
 |  |  |  |  | [Setting Pen Width and Alignment](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-setting-pen-width-and-alignment-use) |
 | 代码位置 |  |  | √ | URL |
 
 ### [Using Image Encoders and Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-image-encoders-and-decoders-use)
 | 代码位置 | VS2005 | VS2010 | VS2015 | 微软文档 |
 |---------|:------:|:------:|:------:|---------|
-| ImageCoders.InstalledEncoders |  |  | √ | [Listing Installed Encoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-encoders-use) |
-| ImageCoders.InstalledDecoders |  |  | √ | [Listing Installed Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-decoders-use) |
+| UsingImageEncoders.GetImageEncoders |  |  | √ | [Listing Installed Encoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-encoders-use) |
+| UsingImageDecoders.GetImageDecoders |  |  | √ | [Listing Installed Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-decoders-use) |
 | ImageCoders.GetEncoderClsid |  |  | √ | [Retrieving the Class Identifier for an Encoder](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-retrieving-the-class-identifier-for-an-encoder-use) |
 | 代码位置 |  |  |  | [Determining the Parameters Supported by an Encoder](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-determining-the-parameters-supported-by-an-encoder-use) |
 | 代码位置 |  |  |  | [Converting a BMP Image to a PNG Image](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-converting-a-bmp-image-to-a-png-image-use) |

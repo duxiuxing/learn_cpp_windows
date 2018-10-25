@@ -10,7 +10,7 @@ TEST(ImageCoders, EncoderParameters) {
     // Create Bitmap (inherited from Image) object so that we can call
     // GetParameterListSize and GetParameterList.
     Bitmap* bitmap = new Bitmap(1, 1);
-
+	
     // Get the JPEG encoder CLSID.
     CLSID encoderClsid = {0};
     Helper::GetEncoderClsid(L"image/jpeg", &encoderClsid);
