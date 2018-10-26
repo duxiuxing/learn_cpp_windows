@@ -6,8 +6,8 @@ using namespace Gdiplus;
 #include "gtest/gtest.h"
 #include "helper.h"
 
-TEST(ImageCoders, GetEncoderClsid) {
-    CLSID encoderClsid = {0};
+TEST(UsingImageEncoders, GetEncoderClsid) {
+    CLSID encoderClsid = GUID_NULL;
     INT result = Helper::GetEncoderClsid(L"image/png", &encoderClsid);
 
     ASSERT_TRUE(result != -1) << "The PNG encoder is not installed.";

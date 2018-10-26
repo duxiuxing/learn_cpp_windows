@@ -42,7 +42,7 @@ public:
         return NULL;
     }
 
-    void CheckCodecInfo(ImageCodecInfo& expectInfo) {
+    void CheckImageCodecInfo(ImageCodecInfo& expectInfo) {
         ImageCodecInfo* actualInfo = FindImageCodecInfo(expectInfo.MimeType);
         ASSERT_TRUE(actualInfo != NULL);
 
@@ -84,7 +84,7 @@ TEST_F(ImageCodecInfoTest, BmpCodecInfo) {
     bmpCodecInfo.SigCount           = 1;
     bmpCodecInfo.SigSize            = 2;
 
-    CheckCodecInfo(bmpCodecInfo);
+    CheckImageCodecInfo(bmpCodecInfo);
 }
 
 TEST_F(ImageCodecInfoTest, JpegCodecInfo) {
@@ -105,7 +105,7 @@ TEST_F(ImageCodecInfoTest, JpegCodecInfo) {
     jpegCodecInfo.SigCount          = 1;
     jpegCodecInfo.SigSize           = 2;
 
-    CheckCodecInfo(jpegCodecInfo);
+    CheckImageCodecInfo(jpegCodecInfo);
 }
 
 TEST_F(ImageCodecInfoTest, GifCodecInfo) {
@@ -126,7 +126,7 @@ TEST_F(ImageCodecInfoTest, GifCodecInfo) {
     gifCodecInfo.SigCount           = 2;
     gifCodecInfo.SigSize            = 6;
 
-    CheckCodecInfo(gifCodecInfo);
+    CheckImageCodecInfo(gifCodecInfo);
 }
 
 TEST_F(ImageCodecInfoTest, TiffCodecInfo) {
@@ -147,7 +147,7 @@ TEST_F(ImageCodecInfoTest, TiffCodecInfo) {
     tiffCodecInfo.SigCount          = 2;
     tiffCodecInfo.SigSize           = 2;
 
-    CheckCodecInfo(tiffCodecInfo);
+    CheckImageCodecInfo(tiffCodecInfo);
 }
 
 TEST_F(ImageCodecInfoTest, PngCodecInfo) {
@@ -168,5 +168,5 @@ TEST_F(ImageCodecInfoTest, PngCodecInfo) {
     pngCodecInfo.SigCount           = 1;
     pngCodecInfo.SigSize            = 8;
 
-    CheckCodecInfo(pngCodecInfo);
+    CheckImageCodecInfo(pngCodecInfo);
 }
