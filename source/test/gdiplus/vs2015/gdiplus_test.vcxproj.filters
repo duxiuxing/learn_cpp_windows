@@ -64,6 +64,9 @@
     <Filter Include="03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color">
       <UniqueIdentifier>{8c74d75f-230f-4f77-b4c5-877673a9b739}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Using a Brush to Fill Shapes\b.Filling a Shape with a Hatch Pattern">
+      <UniqueIdentifier>{7f2d6600-b244-4648-a7e5-07f33d76b3ff}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">
@@ -123,6 +126,9 @@
     <ClCompile Include="..\fill_solid_color_dlg.cpp">
       <Filter>03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color</Filter>
     </ClCompile>
+    <ClCompile Include="..\fill_hatch_pattern_dlg.cpp">
+      <Filter>03.Using a Brush to Fill Shapes\b.Filling a Shape with a Hatch Pattern</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stdafx.h">
@@ -157,6 +163,9 @@
     </ClInclude>
     <ClInclude Include="..\fill_solid_color_dlg.h">
       <Filter>03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fill_hatch_pattern_dlg.h">
+      <Filter>03.Using a Brush to Fill Shapes\b.Filling a Shape with a Hatch Pattern</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

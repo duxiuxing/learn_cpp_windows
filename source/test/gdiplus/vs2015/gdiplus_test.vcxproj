@@ -211,6 +211,7 @@
     <ClCompile Include="..\draw_rectangle_dlg.cpp" />
     <ClCompile Include="..\encoder_clsid.cpp" />
     <ClCompile Include="..\encoder_parameter_test.cpp" />
+    <ClCompile Include="..\fill_hatch_pattern_dlg.cpp" />
     <ClCompile Include="..\fill_solid_color_dlg.cpp" />
     <ClCompile Include="..\getting_started.cpp" />
     <ClCompile Include="..\dll_app.cpp" />
@@ -235,6 +236,7 @@
     <ClInclude Include="..\draw_string_dlg.h" />
     <ClInclude Include="..\draw_rectangle_dlg.h" />
     <ClInclude Include="..\dll_app.h" />
+    <ClInclude Include="..\fill_hatch_pattern_dlg.h" />
     <ClInclude Include="..\fill_solid_color_dlg.h" />
     <ClInclude Include="..\helper.h" />
     <ClInclude Include="..\resource.h" />
