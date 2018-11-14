@@ -4,17 +4,17 @@
 
 class CDrawStringDlg : public CDialog
 {
-	DECLARE_DYNAMIC(CDrawStringDlg)
+    DECLARE_DYNAMIC(CDrawStringDlg)
 
 public:
-	CDrawStringDlg(CWnd* pParent = NULL);   // standard constructor
-	virtual ~CDrawStringDlg();
+    CDrawStringDlg(CWnd* pParent = NULL);   // standard constructor
+    virtual ~CDrawStringDlg();
 
-	// Dialog Data
-	enum {IDD = IDD_DRAW_STRING};
+    // Dialog Data
+    enum {IDD = IDD_DRAW_STRING};
 protected:
-	DECLARE_MESSAGE_MAP()
+    DECLARE_MESSAGE_MAP()
 
 public:
-	afx_msg void OnPaint();
+    afx_msg void OnPaint();
 };

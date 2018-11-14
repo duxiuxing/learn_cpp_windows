@@ -7,10 +7,10 @@
 */
 TEST(BasicTypesTest, BoolToString)
 {
-	CONST TCHAR expectString[] = _T("TRUE=1, FALSE=0");
+    CONST TCHAR expectString[] = _T("TRUE=1, FALSE=0");
 
-	CString actualString;
-	actualString.Format(_T("TRUE=%u, FALSE=%u"), TRUE, FALSE);
+    CString actualString;
+    actualString.Format(_T("TRUE=%u, FALSE=%u"), TRUE, FALSE);
 
-	EXPECT_STREQ(expectString, actualString);
+    EXPECT_STREQ(expectString, actualString);
 }

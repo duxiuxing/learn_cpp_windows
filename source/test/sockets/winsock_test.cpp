@@ -11,7 +11,8 @@
 */
 #if _MSC_VER >= 1600
 
-TEST(WinSockTest, InetPton) {
+TEST(WinSockTest, InetPton)
+{
     TCHAR ipString[] = _T("192.168.0.1");
 
     in_addr ipAddress;
@@ -23,7 +24,8 @@ TEST(WinSockTest, InetPton) {
 
 #else // VS2005
 
-TEST(WinSockTest, inet_addr) {
+TEST(WinSockTest, inet_addr)
+{
     char ipString[] = "192.168.0.1";
 
     DWORD ipNumber = inet_addr(ipString);
@@ -41,7 +43,8 @@ TEST(WinSockTest, inet_addr) {
 */
 #if _MSC_VER >= 1600
 
-TEST(WinSockTest, InetNtop) {
+TEST(WinSockTest, InetNtop)
+{
     DWORD ipNumber = 16820416;
 
     in_addr ipAddress;
@@ -54,11 +57,12 @@ TEST(WinSockTest, InetNtop) {
 
 #else // VS2005
 
-TEST(WinSockTest, inet_ntoa) {
+TEST(WinSockTest, inet_ntoa)
+{
     DWORD ipNumber = 16820416;
 
-	in_addr ipAddress;
-	ipAddress.s_addr = ipNumber;
+    in_addr ipAddress;
+    ipAddress.s_addr = ipNumber;
     std::string ipString(inet_ntoa(ipAddress));
 
     EXPECT_STREQ("192.168.0.1", ipString.c_str());
@@ -70,7 +74,8 @@ TEST(WinSockTest, inet_ntoa) {
         - inet_ntoa()每次返回的char*都指向同一段内存空间；
         - 应该用std::string或者CString这样的封装类来缓存inet_ntoa()的返回值。
 */
-TEST(WinSockTest, inet_ntoa_return_value) {
+TEST(WinSockTest, inet_ntoa_return_value)
+{
     char* ipString1 = NULL;
     char* ipString2 = NULL;
 

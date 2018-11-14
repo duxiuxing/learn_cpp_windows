@@ -10,39 +10,39 @@ using namespace Gdiplus;
 IMPLEMENT_DYNAMIC(CDrawJpegDlg, CDialog)
 
 CDrawJpegDlg::CDrawJpegDlg(CWnd* pParent /*=NULL*/)
-	: CDialog(CDrawJpegDlg::IDD, pParent)
-	, m_image(NULL)
+    : CDialog(CDrawJpegDlg::IDD, pParent)
+    , m_image(NULL)
 {
-	ATL::CPath jpegFile;
-	BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFile);
-	EXPECT_EQ(TRUE, jpegFileExist);
+    ATL::CPath jpegFile;
+    BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFile);
+    EXPECT_EQ(TRUE, jpegFileExist);
 
-	if (jpegFileExist)
-	{
-		m_image = new Image(jpegFile);
-	}
+    if (jpegFileExist)
+    {
+        m_image = new Image(jpegFile);
+    }
 }
 
 CDrawJpegDlg::~CDrawJpegDlg()
 {
-	if (m_image)
-	{
-		delete m_image;
-		m_image = NULL;
-	}
+    if (m_image)
+    {
+        delete m_image;
+        m_image = NULL;
+    }
 }
 
 BEGIN_MESSAGE_MAP(CDrawJpegDlg, CDialog)
-	ON_WM_PAINT()
+    ON_WM_PAINT()
 END_MESSAGE_MAP()
 
 void CDrawJpegDlg::OnPaint()
 {
-	CPaintDC   dc(this);
-	Graphics   graphics(dc.GetSafeHdc());
+    CPaintDC   dc(this);
+    Graphics   graphics(dc.GetSafeHdc());
 
-	if (m_image)
-	{
-		graphics.DrawImage(m_image, 60, 10);
-	}
+    if (m_image)
+    {
+        graphics.DrawImage(m_image, 60, 10);
+    }
 }

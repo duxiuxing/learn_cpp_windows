@@ -15,22 +15,22 @@ using namespace ATL;
 */
 TEST(ATLPathTest, GetParentDirectory)
 {
-	// 1
-	CString exePath;
-	ASSERT_NE(::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH), 0);
-	exePath.ReleaseBuffer();
+    // 1
+    CString exePath;
+    ASSERT_NE(::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH), 0);
+    exePath.ReleaseBuffer();
 
-	// 2
-	CString dirPath1;
-	{
-		CPath path(exePath);
-		dirPath1 = exePath.Left(path.FindFileName() - 1);
-	}
+    // 2
+    CString dirPath1;
+    {
+        CPath path(exePath);
+        dirPath1 = exePath.Left(path.FindFileName() - 1);
+    }
 
-	// 3
-	CPath dirPath2(exePath);
-	ASSERT_NE(dirPath2.RemoveFileSpec(), FALSE);
+    // 3
+    CPath dirPath2(exePath);
+    ASSERT_NE(dirPath2.RemoveFileSpec(), FALSE);
 
-	// 4
-	EXPECT_EQ(0, dirPath2.m_strPath.Compare(dirPath1));
+    // 4
+    EXPECT_EQ(0, dirPath2.m_strPath.Compare(dirPath1));
 }

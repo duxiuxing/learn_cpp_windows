@@ -6,7 +6,8 @@ using namespace Gdiplus;
 #include "gtest/gtest.h"
 #include "helper.h"
 
-class ImageCodecInfoTest : public testing::Test {
+class ImageCodecInfoTest : public testing::Test
+{
 protected:
     ImageCodecInfo* m_imageCodecInfoList;
     UINT m_imageCodecInfoCount;
@@ -16,33 +17,41 @@ public:
         : m_imageCodecInfoList(NULL)
         , m_imageCodecInfoCount(0) {}
 
-    virtual void SetUp() override {
+    virtual void SetUp() override
+    {
         UINT bytes = 0;
         GetImageEncodersSize(&m_imageCodecInfoCount, &bytes);
-        if (bytes != 0) {
+        if (bytes != 0)
+        {
             m_imageCodecInfoList = (ImageCodecInfo*)(malloc(bytes));
             GetImageEncoders(m_imageCodecInfoCount, bytes, m_imageCodecInfoList);
         }
     }
 
-    virtual void TearDown() override {
-        if (m_imageCodecInfoList) {
+    virtual void TearDown() override
+    {
+        if (m_imageCodecInfoList)
+        {
             free(m_imageCodecInfoList);
             m_imageCodecInfoList = NULL;
             m_imageCodecInfoCount = 0;
         }
     }
 
-    ImageCodecInfo* FindImageCodecInfo(const WCHAR* mimeType) {
-        for (UINT i = 0; i < m_imageCodecInfoCount; ++i) {
-            if (wcscmp(m_imageCodecInfoList[i].MimeType, mimeType) == 0) {
+    ImageCodecInfo* FindImageCodecInfo(const WCHAR* mimeType)
+    {
+        for (UINT i = 0; i < m_imageCodecInfoCount; ++i)
+        {
+            if (wcscmp(m_imageCodecInfoList[i].MimeType, mimeType) == 0)
+            {
                 return (m_imageCodecInfoList + i);
             }
         }
         return NULL;
     }
 
-    void CheckImageCodecInfo(ImageCodecInfo& expectInfo) {
+    void CheckImageCodecInfo(ImageCodecInfo& expectInfo)
+    {
         ImageCodecInfo* actualInfo = FindImageCodecInfo(expectInfo.MimeType);
         ASSERT_TRUE(actualInfo != NULL);
 
@@ -66,7 +75,8 @@ public:
     }
 };
 
-TEST_F(ImageCodecInfoTest, BmpCodecInfo) {
+TEST_F(ImageCodecInfoTest, BmpCodecInfo)
+{
     ImageCodecInfo bmpCodecInfo;
 
     CLSIDFromString(L"{557CF400-1A04-11D3-9A73-0000F81EF32E}", &bmpCodecInfo.Clsid);
@@ -87,7 +97,8 @@ TEST_F(ImageCodecInfoTest, BmpCodecInfo) {
     CheckImageCodecInfo(bmpCodecInfo);
 }
 
-TEST_F(ImageCodecInfoTest, JpegCodecInfo) {
+TEST_F(ImageCodecInfoTest, JpegCodecInfo)
+{
     ImageCodecInfo jpegCodecInfo;
 
     CLSIDFromString(L"{557CF401-1A04-11D3-9A73-0000F81EF32E}", &jpegCodecInfo.Clsid);
@@ -108,7 +119,8 @@ TEST_F(ImageCodecInfoTest, JpegCodecInfo) {
     CheckImageCodecInfo(jpegCodecInfo);
 }
 
-TEST_F(ImageCodecInfoTest, GifCodecInfo) {
+TEST_F(ImageCodecInfoTest, GifCodecInfo)
+{
     ImageCodecInfo gifCodecInfo;
 
     CLSIDFromString(L"{557CF402-1A04-11D3-9A73-0000F81EF32E}", &gifCodecInfo.Clsid);
@@ -129,7 +141,8 @@ TEST_F(ImageCodecInfoTest, GifCodecInfo) {
     CheckImageCodecInfo(gifCodecInfo);
 }
 
-TEST_F(ImageCodecInfoTest, TiffCodecInfo) {
+TEST_F(ImageCodecInfoTest, TiffCodecInfo)
+{
     ImageCodecInfo tiffCodecInfo;
 
     CLSIDFromString(L"{557CF405-1A04-11D3-9A73-0000F81EF32E}", &tiffCodecInfo.Clsid);
@@ -150,7 +163,8 @@ TEST_F(ImageCodecInfoTest, TiffCodecInfo) {
     CheckImageCodecInfo(tiffCodecInfo);
 }
 
-TEST_F(ImageCodecInfoTest, PngCodecInfo) {
+TEST_F(ImageCodecInfoTest, PngCodecInfo)
+{
     ImageCodecInfo pngCodecInfo;
 
     CLSIDFromString(L"{557CF406-1A04-11D3-9A73-0000F81EF32E}", &pngCodecInfo.Clsid);

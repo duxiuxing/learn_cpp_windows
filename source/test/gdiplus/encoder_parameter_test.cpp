@@ -6,7 +6,8 @@ using namespace Gdiplus;
 #include "gtest/gtest.h"
 #include "helper.h"
 
-class EncoderParameterTest : public testing::Test {
+class EncoderParameterTest : public testing::Test
+{
 protected:
     Bitmap* m_bitmap;
     EncoderParameters* m_encoderParameters;
@@ -16,24 +17,30 @@ public:
         : m_bitmap(NULL)
         , m_encoderParameters(NULL) {}
 
-    virtual void SetUp() override {
+    virtual void SetUp() override
+    {
         m_bitmap = new Bitmap(1, 1);
     }
 
-    virtual void TearDown() override {
-        if (m_encoderParameters) {
+    virtual void TearDown() override
+    {
+        if (m_encoderParameters)
+        {
             free(m_encoderParameters);
             m_encoderParameters = NULL;
         }
 
-        if (m_bitmap) {
+        if (m_bitmap)
+        {
             delete m_bitmap;
             m_bitmap = NULL;
         }
     }
 
-    EncoderParameters* GetEncoderParameterList(const WCHAR* mimeType) {
-        if (m_encoderParameters) {
+    EncoderParameters* GetEncoderParameterList(const WCHAR* mimeType)
+    {
+        if (m_encoderParameters)
+        {
             return m_encoderParameters;
         }
 
@@ -43,7 +50,8 @@ public:
 
         // How big (in bytes) is the Encoder's parameter list?
         UINT bytes = m_bitmap->GetEncoderParameterListSize(&clsidEncoder);
-        if (bytes) {
+        if (bytes)
+        {
             // Allocate a buffer large enough to hold the parameter list.
             m_encoderParameters = (EncoderParameters*)malloc(bytes);
 
@@ -54,7 +62,8 @@ public:
         return m_encoderParameters;
     }
 
-    void CheckEncoderParameter(EncoderParameter& expectParam, EncoderParameter& actualParam) {
+    void CheckEncoderParameter(EncoderParameter& expectParam, EncoderParameter& actualParam)
+    {
         WCHAR guid[39] = {0};
         StringFromGUID2(actualParam.Guid, guid, 39);
         EXPECT_TRUE(::IsEqualGUID(expectParam.Guid, actualParam.Guid)) << "Actual Guid is " << guid;
@@ -62,8 +71,10 @@ public:
         EXPECT_EQ(expectParam.NumberOfValues, actualParam.NumberOfValues);
         EXPECT_EQ(expectParam.Type, actualParam.Type);
 
-        if (expectParam.Value) {
-            switch (expectParam.Type) {
+        if (expectParam.Value)
+        {
+            switch (expectParam.Type)
+            {
             case EncoderParameterValueTypeLong:
                 EXPECT_TRUE(0 == memcmp(expectParam.Value, actualParam.Value, expectParam.NumberOfValues * sizeof(LONG)));
                 break;
@@ -77,18 +88,21 @@ public:
     }
 };
 
-TEST_F(EncoderParameterTest, BmpEncoderParameters) {
+TEST_F(EncoderParameterTest, BmpEncoderParameters)
+{
     EncoderParameters* bmpEncoderParameters = GetEncoderParameterList(L"image/bmp");
     ASSERT_TRUE(NULL == bmpEncoderParameters);
 }
 
-TEST_F(EncoderParameterTest, JpegEncoderParameters) {
+TEST_F(EncoderParameterTest, JpegEncoderParameters)
+{
     EncoderParameters* jpegEncoderParameters = GetEncoderParameterList(L"image/jpeg");
     ASSERT_TRUE(NULL != jpegEncoderParameters);
 
     EXPECT_EQ(5, jpegEncoderParameters->Count);
 
-    const LONG transformation[] = {
+    const LONG transformation[] =
+    {
         EncoderValueTransformRotate90,        // 13
         EncoderValueTransformRotate180,       // 14
         EncoderValueTransformRotate270,       // 15
@@ -134,7 +148,8 @@ TEST_F(EncoderParameterTest, JpegEncoderParameters) {
 #endif //(GDIPVER >= 0x0110)
 }
 
-TEST_F(EncoderParameterTest, GifEncoderParameters) {
+TEST_F(EncoderParameterTest, GifEncoderParameters)
+{
     EncoderParameters* gifEncoderParameters = GetEncoderParameterList(L"image/gif");
     ASSERT_TRUE(NULL != gifEncoderParameters);
 
@@ -158,13 +173,15 @@ TEST_F(EncoderParameterTest, GifEncoderParameters) {
     CheckEncoderParameter(param1, gifEncoderParameters->Parameter[1]);
 }
 
-TEST_F(EncoderParameterTest, TiffEncoderParameters) {
+TEST_F(EncoderParameterTest, TiffEncoderParameters)
+{
     EncoderParameters* tiffEncoderParameters = GetEncoderParameterList(L"image/tiff");
     ASSERT_TRUE(NULL != tiffEncoderParameters);
 
     EXPECT_EQ(4, tiffEncoderParameters->Count);
 
-    const LONG compression[] = {
+    const LONG compression[] =
+    {
         EncoderValueCompressionLZW,     // 2
         EncoderValueCompressionCCITT3,  // 3
         EncoderValueCompressionRle,     // 5
@@ -204,7 +221,8 @@ TEST_F(EncoderParameterTest, TiffEncoderParameters) {
 #endif //(GDIPVER >= 0x0110)
 }
 
-TEST_F(EncoderParameterTest, PngEncoderParameters) {
+TEST_F(EncoderParameterTest, PngEncoderParameters)
+{
     EncoderParameters* pngEncoderParameters = GetEncoderParameterList(L"image/png");
     ASSERT_TRUE(NULL != pngEncoderParameters);
 

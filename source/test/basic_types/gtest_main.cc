@@ -35,10 +35,11 @@
 
 #pragma comment(lib, "gtest_static.lib")
 
-int main(int argc, char **argv) {
-  printf("Running main() from %s\n", __FILE__);
-  testing::InitGoogleTest(&argc, argv);
-  return RUN_ALL_TESTS();
+int main(int argc, char** argv)
+{
+    printf("Running main() from %s\n", __FILE__);
+    testing::InitGoogleTest(&argc, argv);
+    return RUN_ALL_TESTS();
 }
 
 #endif // #ifdef _CONSOLE

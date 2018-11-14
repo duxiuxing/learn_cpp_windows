@@ -6,7 +6,8 @@ using namespace Gdiplus;
 #include "gtest/gtest.h"
 #include <vector>
 
-TEST(UsingImageDecoders, GetImageDecoders) {
+TEST(UsingImageDecoders, GetImageDecoders)
+{
     UINT numDecoders = 0;   // number of image decoders
     UINT size = 0;          // size, in bytes, of the image decoder array
 
@@ -25,7 +26,8 @@ TEST(UsingImageDecoders, GetImageDecoders) {
 
     // Check the graphics file format (MimeType)
     // for each ImageCodecInfo object.
-    WCHAR* allMimeTypes[] = {
+    WCHAR* allMimeTypes[] =
+    {
         L"image/bmp",
         L"image/jpeg",
         L"image/gif",
@@ -35,7 +37,8 @@ TEST(UsingImageDecoders, GetImageDecoders) {
         L"image/png",
         L"image/x-icon"
     };
-    for (UINT j = 0; j < numDecoders; ++j) {
+    for (UINT j = 0; j < numDecoders; ++j)
+    {
         EXPECT_STREQ(allMimeTypes[j], pImageCodecInfo[j].MimeType);
     }
 

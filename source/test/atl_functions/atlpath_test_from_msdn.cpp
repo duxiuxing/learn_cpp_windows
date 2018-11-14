@@ -53,32 +53,32 @@ using namespace ATL;
 */
 TEST(ATLPathTest, RemoveFileSpec)
 {
-	// 本地路径
-	{
-		CPath path(_T("C:\\Windows\\notepad.exe"));
+    // 本地路径
+    {
+        CPath path(_T("C:\\Windows\\notepad.exe"));
 
-		EXPECT_NE(path.RemoveFileSpec(), FALSE);
-		EXPECT_STREQ(_T("C:\\Windows"), path.m_strPath);
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("C:\\Windows"), path.m_strPath);
 
-		EXPECT_NE(path.RemoveFileSpec(), FALSE);
-		EXPECT_STREQ(_T("C:\\"), path.m_strPath);
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("C:\\"), path.m_strPath);
 
-		EXPECT_EQ(FALSE, path.RemoveFileSpec());
-	}
+        EXPECT_EQ(FALSE, path.RemoveFileSpec());
+    }
 
-	// 共享路径
-	{
-		CPath path(_T("\\\\localhost\\share\\Wallpaper.jpg"));
+    // 共享路径
+    {
+        CPath path(_T("\\\\localhost\\share\\Wallpaper.jpg"));
 
-		EXPECT_NE(path.RemoveFileSpec(), FALSE);
-		EXPECT_STREQ(_T("\\\\localhost\\share"), path.m_strPath);
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\localhost\\share"), path.m_strPath);
 
-		EXPECT_NE(path.RemoveFileSpec(), FALSE);
-		EXPECT_STREQ(_T("\\\\localhost"), path.m_strPath);
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\localhost"), path.m_strPath);
 
-		EXPECT_NE(path.RemoveFileSpec(), FALSE);
-		EXPECT_STREQ(_T("\\\\"), path.m_strPath);
+        EXPECT_NE(path.RemoveFileSpec(), FALSE);
+        EXPECT_STREQ(_T("\\\\"), path.m_strPath);
 
-		EXPECT_EQ(FALSE, path.RemoveFileSpec());
-	}
+        EXPECT_EQ(FALSE, path.RemoveFileSpec());
+    }
 }
