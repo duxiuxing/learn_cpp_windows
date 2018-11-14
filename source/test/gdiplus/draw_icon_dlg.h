@@ -6,20 +6,16 @@ namespace Gdiplus {
 class Bitmap;
 }
 
-class CDrawIconDlg : public CDialog
+class DrawIconDlg : public CDialog
 {
-    DECLARE_DYNAMIC(CDrawIconDlg)
-
 public:
-    CDrawIconDlg(CWnd* pParent = NULL);   // standard constructor
-    virtual ~CDrawIconDlg();
+    enum { IDD = IDD_DRAW_ICON };
+    DrawIconDlg(CWnd* pParent = NULL);   // standard constructor
+    virtual ~DrawIconDlg();      
 
-    // Dialog Data
-    enum {IDD = IDD_DRAW_ICON};
 protected:
     DECLARE_MESSAGE_MAP()
-
-public:
     afx_msg void OnPaint();
+
     Gdiplus::Bitmap* m_bitmap;
 };

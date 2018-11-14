@@ -4,20 +4,17 @@
 #include <gdiplus.h>
 using namespace Gdiplus;
 
-IMPLEMENT_DYNAMIC(CDrawStringDlg, CDialog)
+#include "gtest/gtest.h"
 
-CDrawStringDlg::CDrawStringDlg(CWnd* pParent /*=NULL*/)
-    : CDialog(CDrawStringDlg::IDD, pParent)
+DrawStringDlg::DrawStringDlg(CWnd* pParent /*=NULL*/)
+    : CDialog(DrawStringDlg::IDD, pParent)
 {}
 
-CDrawStringDlg::~CDrawStringDlg()
-{}
-
-BEGIN_MESSAGE_MAP(CDrawStringDlg, CDialog)
+BEGIN_MESSAGE_MAP(DrawStringDlg, CDialog)
     ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void CDrawStringDlg::OnPaint()
+void DrawStringDlg::OnPaint()
 {
     CPaintDC   dc(this);
     Graphics   graphics(dc.GetSafeHdc());
@@ -26,5 +23,5 @@ void CDrawStringDlg::OnPaint()
     Font       font(&fontFamily, 24, FontStyleRegular, UnitPixel);
     PointF     pointF(10.0f, 20.0f);
 
-    graphics.DrawString(L"Hello World!", -1, &font, pointF, &brush);
+    EXPECT_EQ(Gdiplus::Ok, graphics.DrawString(L"Hello World!", -1, &font, pointF, &brush));
 }

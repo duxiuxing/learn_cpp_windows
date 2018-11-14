@@ -7,14 +7,14 @@ using namespace Gdiplus;
 
 #include "gtest/gtest.h"
 
-IMPLEMENT_DYNAMIC(CDrawJpegDlg, CDialog)
+IMPLEMENT_DYNAMIC(DrawJpegDlg, CDialog)
 
-CDrawJpegDlg::CDrawJpegDlg(CWnd* pParent /*=NULL*/)
-    : CDialog(CDrawJpegDlg::IDD, pParent)
+DrawJpegDlg::DrawJpegDlg(CWnd* pParent /*=NULL*/)
+    : CDialog(DrawJpegDlg::IDD, pParent)
     , m_image(NULL)
 {
     ATL::CPath jpegFilePath;
-    BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFilePath);
+    BOOL jpegFileExist = Helper::QueryResourceFile(_T("gdiplus\\Grapes.jpg"), jpegFilePath);
     EXPECT_EQ(TRUE, jpegFileExist);
 
     if (jpegFileExist)
@@ -23,7 +23,7 @@ CDrawJpegDlg::CDrawJpegDlg(CWnd* pParent /*=NULL*/)
     }
 }
 
-CDrawJpegDlg::~CDrawJpegDlg()
+DrawJpegDlg::~DrawJpegDlg()
 {
     if (m_image)
     {
@@ -32,17 +32,17 @@ CDrawJpegDlg::~CDrawJpegDlg()
     }
 }
 
-BEGIN_MESSAGE_MAP(CDrawJpegDlg, CDialog)
+BEGIN_MESSAGE_MAP(DrawJpegDlg, CDialog)
     ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void CDrawJpegDlg::OnPaint()
+void DrawJpegDlg::OnPaint()
 {
-    CPaintDC   dc(this);
-    Graphics   graphics(dc.GetSafeHdc());
+    CPaintDC dc(this);
+    Graphics graphics(dc.GetSafeHdc());
 
     if (m_image)
     {
-        graphics.DrawImage(m_image, 60, 10);
+        EXPECT_EQ(Gdiplus::Ok, graphics.DrawImage(m_image, 60, 10));
     }
 }

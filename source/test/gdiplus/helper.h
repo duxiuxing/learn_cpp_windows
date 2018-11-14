@@ -5,7 +5,7 @@
 namespace Helper {
 
 // return fileFullPath.FileExists()
-BOOL GetResourceFileFullPath(PTSTR fileRelativePath, ATL::CPath& fileFullPath);
+BOOL QueryResourceFile(PTSTR fileRelativePath, ATL::CPath& fileFullPath);
 
 /*
     Retrieving the Class Identifier for an Encoder.

@@ -4,7 +4,7 @@
 #include <gdiplus.h>
 using namespace Gdiplus;
 
-BOOL Helper::GetResourceFileFullPath(PTSTR fileRelativePath, ATL::CPath& fileFullPath)
+BOOL Helper::QueryResourceFile(PTSTR fileRelativePath, ATL::CPath& fileFullPath)
 {
     ATL::CPath relativePath;
     relativePath.Combine(_T("resource"), fileRelativePath);

@@ -6,16 +6,16 @@ namespace Gdiplus {
 class Image;
 }
 
-class CDrawJpegDlg : public CDialog
+class DrawJpegDlg : public CDialog
 {
-    DECLARE_DYNAMIC(CDrawJpegDlg)
+    DECLARE_DYNAMIC(DrawJpegDlg)
 
 public:
-    CDrawJpegDlg(CWnd* pParent = NULL);   // standard constructor
-    virtual ~CDrawJpegDlg();
+    DrawJpegDlg(CWnd* pParent = NULL);   // standard constructor
+    virtual ~DrawJpegDlg();
 
     // Dialog Data
-    enum {IDD = IDD_DRAW_JPEG};
+    enum { IDD = IDD_DRAW_JPEG };
 protected:
     DECLARE_MESSAGE_MAP()
 

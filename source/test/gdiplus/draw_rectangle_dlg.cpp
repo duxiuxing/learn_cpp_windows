@@ -6,24 +6,19 @@ using namespace Gdiplus;
 
 #include "gtest/gtest.h"
 
-IMPLEMENT_DYNAMIC(CDrawRectangleDlg, CDialog)
-
-CDrawRectangleDlg::CDrawRectangleDlg(CWnd* pParent /*=NULL*/)
-    : CDialog(CDrawRectangleDlg::IDD, pParent)
+DrawRectangleDlg::DrawRectangleDlg(CWnd* pParent /*=NULL*/)
+    : CDialog(DrawRectangleDlg::IDD, pParent)
 {}
 
-CDrawRectangleDlg::~CDrawRectangleDlg()
-{}
-
-BEGIN_MESSAGE_MAP(CDrawRectangleDlg, CDialog)
+BEGIN_MESSAGE_MAP(DrawRectangleDlg, CDialog)
     ON_WM_PAINT()
 END_MESSAGE_MAP()
 
-void CDrawRectangleDlg::OnPaint()
+void DrawRectangleDlg::OnPaint()
 {
     CPaintDC dc(this);
     Graphics graphics(dc.GetSafeHdc());
-    Pen blackPen(Color(255, 0, 0, 0), 5);
-    Status status = graphics.DrawRectangle(&blackPen, 10, 10, 100, 50);
-    EXPECT_EQ(Gdiplus::Ok, status);
+    Pen      blackPen(Color(255, 0, 0, 0), 5);
+
+    EXPECT_EQ(Gdiplus::Ok, graphics.DrawRectangle(&blackPen, 10, 10, 100, 50));
 }

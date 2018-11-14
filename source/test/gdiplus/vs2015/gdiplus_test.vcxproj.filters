@@ -58,6 +58,12 @@
     <Filter Include="05.Using Image Encoders and Decoders\e.Converting a BMP Image to a PNG Image">
       <UniqueIdentifier>{a5efcca5-dce9-4bfc-970c-1b529ae0d0de}</UniqueIdentifier>
     </Filter>
+    <Filter Include="03.Using a Brush to Fill Shapes">
+      <UniqueIdentifier>{35d2f939-4889-4bbe-837d-9ed3e4d6595c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color">
+      <UniqueIdentifier>{8c74d75f-230f-4f77-b4c5-877673a9b739}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">

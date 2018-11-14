@@ -9,7 +9,7 @@ using namespace Gdiplus;
 TEST(UsingImageEncoders, BmpToPng)
 {
     ATL::CPath bmpFilePath;
-    BOOL bmpFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Bird.bmp"), bmpFilePath);
+    BOOL bmpFileExist = Helper::QueryResourceFile(_T("gdiplus\\Bird.bmp"), bmpFilePath);
     ASSERT_EQ(TRUE, bmpFileExist);
 
     // Get the CLSID of the PNG encoder.
@@ -19,14 +19,12 @@ TEST(UsingImageEncoders, BmpToPng)
 
     Image* image = new Image(bmpFilePath);
 
+    // Construct .png path in the same folder.
     bmpFilePath.RemoveFileSpec();
     ATL::CPath pngFilePath;
     pngFilePath.Combine(bmpFilePath, L"Bird.png");
-    if (pngFilePath.FileExists())
-    {
-        ::DeleteFile(pngFilePath);
-    }
 
+    if (pngFilePath.FileExists()) { ::DeleteFile(pngFilePath); }
     Status stat = image->Save(pngFilePath, &encoderClsid, NULL);
 
     EXPECT_EQ(Gdiplus::Ok, stat) << "Failure: stat = " << stat;

@@ -2,20 +2,13 @@
 
 #include "resource.h"
 
-class CDrawLineDlg : public CDialog
+class DrawLineDlg : public CDialog
 {
-    DECLARE_DYNAMIC(CDrawLineDlg)
-
 public:
-    CDrawLineDlg(CWnd* pParent = NULL);   // standard constructor
-    virtual ~CDrawLineDlg();
-
-    // Dialog Data
-    enum {IDD = IDD_DRAW_LINE};
+    enum { IDD = IDD_DRAW_LINE };
+    DrawLineDlg(CWnd* pParent = NULL);
 
 protected:
     DECLARE_MESSAGE_MAP()
-
-public:
     afx_msg void OnPaint();
 };

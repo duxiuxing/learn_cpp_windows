@@ -9,8 +9,8 @@ class UsingImage
 {
     CPPUNIT_TEST_SUITE(UsingImage);
     {
-        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawJpeg, CDrawJpegDlg, MS_TIMEOUT);
-        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawIcon, CDrawIconDlg, MS_TIMEOUT);
+        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawJpeg, DrawJpegDlg, MS_TIMEOUT);
+        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawIcon, DrawIconDlg, MS_TIMEOUT);
     }
     CPPUNIT_TEST_SUITE_END();
 };

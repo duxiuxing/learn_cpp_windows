@@ -2,19 +2,13 @@
 
 #include "resource.h"
 
-class CDrawRectangleDlg : public CDialog
+class DrawRectangleDlg : public CDialog
 {
-    DECLARE_DYNAMIC(CDrawRectangleDlg)
-
 public:
-    CDrawRectangleDlg(CWnd* pParent = NULL);   // standard constructor
-    virtual ~CDrawRectangleDlg();
+    enum { IDD = IDD_DRAW_RECTANGLE };
+    DrawRectangleDlg(CWnd* pParent = NULL);    
 
-    // Dialog Data
-    enum {IDD = IDD_DRAW_RECTANGLE};
 protected:
     DECLARE_MESSAGE_MAP()
-
-public:
     afx_msg void OnPaint();
 };

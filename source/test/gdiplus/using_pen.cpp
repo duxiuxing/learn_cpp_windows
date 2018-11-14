@@ -8,7 +8,7 @@ class UsingPen
 {
 	CPPUNIT_TEST_SUITE(UsingPen);
 	{
-		CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawRectangle, CDrawRectangleDlg, MS_TIMEOUT);
+		CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawRectangle, DrawRectangleDlg, MS_TIMEOUT);
 	}
 	CPPUNIT_TEST_SUITE_END();
 };

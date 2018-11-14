@@ -9,8 +9,8 @@ class GettingStarted
 {
     CPPUNIT_TEST_SUITE(GettingStarted);
     {
-        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawLine, CDrawLineDlg, MS_TIMEOUT);
-        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawString, CDrawStringDlg, MS_TIMEOUT);
+        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawLine, DrawLineDlg, MS_TIMEOUT);
+        CPPUNIT_MFC_DIALOG_TEST_WITH_TIMEOUT(DrawString, DrawStringDlg, MS_TIMEOUT);
     }
     CPPUNIT_TEST_SUITE_END();
 };
