@@ -211,6 +211,7 @@
     <ClCompile Include="..\draw_rectangle_dlg.cpp" />
     <ClCompile Include="..\encoder_clsid.cpp" />
     <ClCompile Include="..\encoder_parameter_test.cpp" />
+    <ClCompile Include="..\fill_solid_color_dlg.cpp" />
     <ClCompile Include="..\getting_started.cpp" />
     <ClCompile Include="..\dll_app.cpp" />
     <ClCompile Include="..\get_image_decoders.cpp" />
@@ -223,6 +224,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(cutest)|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release(cutest)|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="..\using_brush.cpp" />
     <ClCompile Include="..\using_image.cpp" />
     <ClCompile Include="..\using_pen.cpp" />
   </ItemGroup>
@@ -233,6 +235,7 @@
     <ClInclude Include="..\draw_string_dlg.h" />
     <ClInclude Include="..\draw_rectangle_dlg.h" />
     <ClInclude Include="..\dll_app.h" />
+    <ClInclude Include="..\fill_solid_color_dlg.h" />
     <ClInclude Include="..\helper.h" />
     <ClInclude Include="..\resource.h" />
     <ClInclude Include="..\stdafx.h" />

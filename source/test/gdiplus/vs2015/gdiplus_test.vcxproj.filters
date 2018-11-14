@@ -117,6 +117,12 @@
     <ClCompile Include="..\bmp_to_png.cpp">
       <Filter>05.Using Image Encoders and Decoders\e.Converting a BMP Image to a PNG Image</Filter>
     </ClCompile>
+    <ClCompile Include="..\using_brush.cpp">
+      <Filter>03.Using a Brush to Fill Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\fill_solid_color_dlg.cpp">
+      <Filter>03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stdafx.h">
@@ -148,6 +154,9 @@
     </ClInclude>
     <ClInclude Include="..\draw_icon_dlg.h">
       <Filter>04.Using Images, Bitmaps, and Metafiles\a.Loading and Displaying Bitmaps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\fill_solid_color_dlg.h">
+      <Filter>03.Using a Brush to Fill Shapes\a.Filling a Shape with a Solid Color</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
