@@ -55,6 +55,9 @@
     <Filter Include="05.Using Image Encoders and Decoders\d.Determining the Parameters Supported by an Encoder">
       <UniqueIdentifier>{03fa323c-b464-4c5d-a60a-2e546ff83570}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05.Using Image Encoders and Decoders\e.Converting a BMP Image to a PNG Image">
+      <UniqueIdentifier>{a5efcca5-dce9-4bfc-970c-1b529ae0d0de}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">
@@ -104,6 +107,9 @@
     </ClCompile>
     <ClCompile Include="..\using_pen.cpp">
       <Filter>02.Using a Pen to Draw Lines and Rectangles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bmp_to_png.cpp">
+      <Filter>05.Using Image Encoders and Decoders\e.Converting a BMP Image to a PNG Image</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

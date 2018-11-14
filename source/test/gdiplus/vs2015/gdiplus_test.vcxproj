@@ -203,6 +203,7 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\bmp_to_png.cpp" />
     <ClCompile Include="..\draw_icon_dlg.cpp" />
     <ClCompile Include="..\draw_jpeg_dlg.cpp" />
     <ClCompile Include="..\draw_line_dlg.cpp" />

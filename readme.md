@@ -29,7 +29,7 @@
 | [Listing Installed Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-decoders-use) | UsingImageDecoders.GetImageDecoders |  |  | √ |
 | [Retrieving the Class Identifier for an Encoder](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-retrieving-the-class-identifier-for-an-encoder-use) | ImageCoders.GetEncoderClsid |  |  | √ |
 | [Determining the Parameters Supported by an Encoder](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-determining-the-parameters-supported-by-an-encoder-use) | 代码位置 |  |  |  |
-|[Converting a BMP Image to a PNG Image](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-converting-a-bmp-image-to-a-png-image-use) | 代码位置 |  |  |  |
+|[Converting a BMP Image to a PNG Image](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-converting-a-bmp-image-to-a-png-image-use) | UsingImageEncoders.BmpToPng |  |  | √ |
 | [Setting JPEG Compression Level](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-setting-jpeg-compression-level-use) | 代码位置 |  |  |  |
 | [Transforming a JPEG Image Without Loss of Information](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-transforming-a-jpeg-image-without-loss-of-information-use) | 代码位置 |  |  |  |
 | [Creating and Saving a Multiple-Frame Image](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-creating-and-saving-a-multiple-frame-image-use) | 代码位置 |  |  |  |

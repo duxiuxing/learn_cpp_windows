@@ -13,13 +13,13 @@ CDrawJpegDlg::CDrawJpegDlg(CWnd* pParent /*=NULL*/)
     : CDialog(CDrawJpegDlg::IDD, pParent)
     , m_image(NULL)
 {
-    ATL::CPath jpegFile;
-    BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFile);
+    ATL::CPath jpegFilePath;
+    BOOL jpegFileExist = Helper::GetResourceFileFullPath(_T("gdiplus\\Grapes.jpg"), jpegFilePath);
     EXPECT_EQ(TRUE, jpegFileExist);
 
     if (jpegFileExist)
     {
-        m_image = new Image(jpegFile);
+        m_image = new Image(jpegFilePath);
     }
 }
 
