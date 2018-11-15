@@ -2,10 +2,11 @@
 
 #include <atlpath.h>
 
+namespace Gdiplus {
 namespace Helper {
 
 // return fileFullPath.FileExists()
-BOOL QueryResourceFile(PTSTR fileRelativePath, ATL::CPath& fileFullPath);
+BOOL QueryResourceFile(TCHAR* fileRelativePath, ATL::CPath& fileFullPath);
 
 /*
     Retrieving the Class Identifier for an Encoder.
@@ -15,4 +16,5 @@ BOOL QueryResourceFile(PTSTR fileRelativePath, ATL::CPath& fileFullPath);
 */
 INT GetEncoderClsid(const WCHAR* format, CLSID* pClsid);
 
-}
+} // namespace Helper {
+} // namespace Gdiplus {

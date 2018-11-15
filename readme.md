@@ -6,7 +6,7 @@
 
 ## [Using GDI+](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-gdi--use)
 
-### [Getting Started](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-getting-started-use)
+### [01.Getting Started](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-getting-started-use)
 
 |  微软文档 |代码位置 | VS2005 | VS2010 | VS2015 |
 |---------|---------|:------:|:------:|:------:|
@@ -14,7 +14,7 @@
 | [Drawing a String](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-drawing-a-string-use) | GettingStarted.DrawString |  |  | √ |
 
 
-### [Using a Pen to Draw Lines and Shapes](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-shapes-use)
+### [02.Using a Pen to Draw Lines and Shapes](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-pen-to-draw-lines-and-shapes-use)
 
 | 微软文档 | 代码位置 | VS2005 | VS2010 | VS2015 |
 |---------|---------|:------:|:------:|:------:|
@@ -22,7 +22,14 @@
 | [Setting Pen Width and Alignment](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-setting-pen-width-and-alignment-use) |  |  |  |  |
 | URL | 代码位置 |  |  | √ |
 
-### [Using Image Encoders and Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-image-encoders-and-decoders-use)
+### [03.Using a Brush to Fill Shapes](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-a-brush-to-fill-shapes-use)
+| 微软文档 | 代码位置 | VS2005 | VS2010 | VS2015 |
+|---------|---------|:------:|:------:|:------:|
+| [Filling a Shape with a Solid Color](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-filling-a-shape-with-a-solid-color-use) | UsingBrush.FillSolidColor |  |  | √ |
+| [Filling a Shape with a Hatch Pattern](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-filling-a-shape-with-a-hatch-pattern-use) | UsingBrush.FillHatchPattern |  |  | √ |
+| URL | 代码位置 |  |  | √ |
+
+### [04.Using Image Encoders and Decoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-using-image-encoders-and-decoders-use)
 | 微软文档 | 代码位置 | VS2005 | VS2010 | VS2015 |
 |---------|---------|:------:|:------:|:------:|
 | [Listing Installed Encoders](https://docs.microsoft.com/en-us/windows/desktop/gdiplus/-gdiplus-listing-installed-encoders-use) | UsingImageEncoders.GetImageEncoders |  |  | √ |
