@@ -17,7 +17,7 @@ TEST(ATLPathTest, GetParentDirectory)
 {
     // 1
     CString exePath;
-    ASSERT_NE(::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH), 0);
+    ASSERT_NE(0, ::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH));
     exePath.ReleaseBuffer();
 
     // 2
@@ -29,7 +29,7 @@ TEST(ATLPathTest, GetParentDirectory)
 
     // 3
     CPath dirPath2(exePath);
-    ASSERT_NE(dirPath2.RemoveFileSpec(), FALSE);
+    ASSERT_EQ(TRUE, dirPath2.RemoveFileSpec());
 
     // 4
     EXPECT_EQ(0, dirPath2.m_strPath.Compare(dirPath1));
