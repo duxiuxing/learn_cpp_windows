@@ -19,10 +19,15 @@ TEST(UsingImageEncoders, BmpToPng)
 
     Image* image = new Image(bmpFilePath);
 
-    // Construct .png path in the same folder.
-    bmpFilePath.RemoveFileSpec();
+    // Construct .png path in the .exe folder.
+    CString exePath;
+    ASSERT_NE(0, ::GetModuleFileName(NULL, exePath.GetBuffer(MAX_PATH), MAX_PATH));
+    exePath.ReleaseBuffer();
+
+    CPath dirPath(exePath);
+    ASSERT_EQ(TRUE, dirPath.RemoveFileSpec());
     ATL::CPath pngFilePath;
-    pngFilePath.Combine(bmpFilePath, L"Bird.png");
+    pngFilePath.Combine(dirPath, L"Bird.png");
 
     if (pngFilePath.FileExists()) { ::DeleteFile(pngFilePath); }
     Status stat = image->Save(pngFilePath, &encoderClsid, NULL);
@@ -30,5 +35,4 @@ TEST(UsingImageEncoders, BmpToPng)
     EXPECT_EQ(Gdiplus::Ok, stat) << "Failure: stat = " << stat;
 
     delete image;
-    ::DeleteFile(pngFilePath);
 };
