@@ -40,15 +40,15 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\mfc_dll.def">
+    <None Include="..\your_project.def">
       <Filter>MFC DLL\Source Files</Filter>
     </None>
-    <None Include="..\res\mfc_dll.rc2">
+    <None Include="..\res\your_project.rc2">
       <Filter>MFC DLL\Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\mfc_dll.rc">
+    <ResourceCompile Include="..\your_project.rc">
       <Filter>MFC DLL\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
