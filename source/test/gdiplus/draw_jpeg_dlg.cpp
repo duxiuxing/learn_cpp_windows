@@ -7,8 +7,6 @@ using namespace Gdiplus;
 
 #include "gtest/gtest.h"
 
-IMPLEMENT_DYNAMIC(DrawJpegDlg, CDialog)
-
 DrawJpegDlg::DrawJpegDlg(CWnd* pParent /*=NULL*/)
     : CDialog(DrawJpegDlg::IDD, pParent)
     , m_image(NULL)

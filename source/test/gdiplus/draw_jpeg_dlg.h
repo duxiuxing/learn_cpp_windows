@@ -8,8 +8,6 @@ class Image;
 
 class DrawJpegDlg : public CDialog
 {
-    DECLARE_DYNAMIC(DrawJpegDlg)
-
 public:
     DrawJpegDlg(CWnd* pParent = NULL);   // standard constructor
     virtual ~DrawJpegDlg();
