@@ -341,7 +341,7 @@
 			Name="Test"
 			>
 			<File
-				RelativePath="..\winsock_test.cpp"
+				RelativePath="..\winsock_test_vs2005.cpp"
 				>
 			</File>
 		</Filter>
