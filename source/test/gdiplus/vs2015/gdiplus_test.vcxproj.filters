@@ -75,7 +75,7 @@
     <ClCompile Include="..\draw_line_dlg.cpp">
       <Filter>01.Getting Started\a.Drawing a Line</Filter>
     </ClCompile>
-    <ClCompile Include="..\dll_app.cpp">
+    <ClCompile Include="..\mfc_dll_app.cpp">
       <Filter>MFC DLL\Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\getting_started.cpp">
@@ -143,7 +143,7 @@
     <ClInclude Include="..\draw_line_dlg.h">
       <Filter>01.Getting Started\a.Drawing a Line</Filter>
     </ClInclude>
-    <ClInclude Include="..\dll_app.h">
+    <ClInclude Include="..\mfc_dll_app.h">
       <Filter>MFC DLL\Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\draw_string_dlg.h">

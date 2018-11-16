@@ -6,16 +6,14 @@
 
 #include "resource.h"       // main symbols
 
-class CDllApp : public CWinApp
+class CMfcDllApp : public CWinApp
 {
-public:
-    CDllApp();
-
-    // Overrides
-public:
-    virtual BOOL InitInstance();
-
     DECLARE_MESSAGE_MAP()
+
+public:
+    CMfcDllApp();
+
+    virtual BOOL InitInstance();    
     virtual int ExitInstance();
 
 protected:

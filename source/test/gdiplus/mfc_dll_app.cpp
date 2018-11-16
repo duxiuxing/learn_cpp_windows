@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "dll_app.h"
+#include "mfc_dll_app.h"
 
 #include <gdiplus.h>
 using namespace Gdiplus;
@@ -10,15 +10,15 @@ using namespace Gdiplus;
     #define new DEBUG_NEW
 #endif
 
-BEGIN_MESSAGE_MAP(CDllApp, CWinApp)
+BEGIN_MESSAGE_MAP(CMfcDllApp, CWinApp)
 END_MESSAGE_MAP()
 
-CDllApp::CDllApp() : m_gdiplusToken(NULL)
+CMfcDllApp::CMfcDllApp() : m_gdiplusToken(NULL)
 {}
 
-CDllApp theApp;
+CMfcDllApp theApp;
 
-BOOL CDllApp::InitInstance()
+BOOL CMfcDllApp::InitInstance()
 {
     CWinApp::InitInstance();
 
@@ -29,7 +29,7 @@ BOOL CDllApp::InitInstance()
     return TRUE;
 }
 
-int CDllApp::ExitInstance()
+int CMfcDllApp::ExitInstance()
 {
     ::GdiplusShutdown(m_gdiplusToken);
 
