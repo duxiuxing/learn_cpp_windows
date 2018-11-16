@@ -3,5 +3,6 @@
   <test libName="AtlFunctionsTest.dll" />
   <test libName="BasicTypesTest.dll" />
   <test libName="GdiplusTest.dll" />
+  <test libName="GdiTest.dll" />
   <test libName="SocketsTest.dll" />
 </root>

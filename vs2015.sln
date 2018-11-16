@@ -22,11 +22,16 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SocketsTest", "source\test\
 		{236D4AC4-1965-49E4-98AD-135EB6F03CCE} = {236D4AC4-1965-49E4-98AD-135EB6F03CCE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pre-build", "source\pre-build\vs2015\pre-build.vcxproj", "{236D4AC4-1965-49E4-98AD-135EB6F03CCE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Pre-Build", "source\pre-build\vs2015\pre-build.vcxproj", "{236D4AC4-1965-49E4-98AD-135EB6F03CCE}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasicTypesTest", "source\test\basic_types\vs2015\basic_types_test.vcxproj", "{85038FE2-80EC-4142-BB76-201809161805}"
 	ProjectSection(ProjectDependencies) = postProject
 		{5E5AC592-F024-477E-B3D3-19D45DFD6C7F} = {5E5AC592-F024-477E-B3D3-19D45DFD6C7F}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GdiTest", "source\test\gdi\vs2015\gdi_test.vcxproj", "{D651CA98-26A6-4AE7-BB2E-201811161441}"
+	ProjectSection(ProjectDependencies) = postProject
+		{236D4AC4-1965-49E4-98AD-135EB6F03CCE} = {236D4AC4-1965-49E4-98AD-135EB6F03CCE}
 	EndProjectSection
 EndProject
 Global
@@ -125,6 +130,18 @@ Global
 		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x64.Build.0 = Release(gtest)|x64
 		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x86.ActiveCfg = Release(gtest)|Win32
 		{85038FE2-80EC-4142-BB76-201809161805}.Release(gtest)|x86.Build.0 = Release(gtest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(cutest)|x64.ActiveCfg = Debug(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(cutest)|x64.Build.0 = Debug(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(cutest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(cutest)|x86.Build.0 = Debug(cutest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(gtest)|x64.ActiveCfg = Debug(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Debug(gtest)|x86.ActiveCfg = Debug(cutest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(cutest)|x64.ActiveCfg = Release(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(cutest)|x64.Build.0 = Release(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(cutest)|x86.ActiveCfg = Release(cutest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(cutest)|x86.Build.0 = Release(cutest)|Win32
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(gtest)|x64.ActiveCfg = Release(cutest)|x64
+		{D651CA98-26A6-4AE7-BB2E-201811161441}.Release(gtest)|x86.ActiveCfg = Release(cutest)|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
