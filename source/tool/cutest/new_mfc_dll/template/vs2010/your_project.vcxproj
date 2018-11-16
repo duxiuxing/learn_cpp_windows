@@ -95,6 +95,7 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="..\res\your_project.ico" />
     <None Include="..\res\your_project.rc2" />
     <None Include="..\your_project.def" />
   </ItemGroup>

@@ -24,6 +24,9 @@
     <None Include="..\res\your_project.rc2">
       <Filter>MFC DLL\Resource Files</Filter>
     </None>
+    <None Include="..\res\your_project.ico">
+      <Filter>MFC DLL\Resource Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\stdafx.cpp">

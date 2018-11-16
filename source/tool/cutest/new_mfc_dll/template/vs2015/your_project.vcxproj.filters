@@ -52,4 +52,9 @@
       <Filter>MFC DLL\Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\res\your_project.ico">
+      <Filter>MFC DLL\Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
