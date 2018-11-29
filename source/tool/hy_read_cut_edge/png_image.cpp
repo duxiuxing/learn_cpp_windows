@@ -7,7 +7,6 @@ namespace HyRead {
 PngImage::PngImage(const WCHAR* filePath)
     : m_filePath(filePath)
     , m_image(NULL)
-    , m_rcMargin(0, 0, 0, 0)
 {
     if (m_filePath.FileExists())
     {
@@ -112,11 +111,11 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
     return TRUE;
 }
 
-BOOL PngImage::EraseLogoWithNewLogo(CDC* dc, const CRect& logoRect, Gdiplus::Image* newLogo, const CSize& newLogoSize)
+BOOL PngImage::EraseLogoWithNewLogo(CDC* dc, const CRect& logoRect, Gdiplus::Image* newLogo)
 {
     if (newLogo)
     {
-        CRect newRect(0, 0, newLogoSize.cx, newLogoSize.cy);
+        CRect newRect(0, 0, newLogo->GetWidth(), newLogo->GetHeight());
         newRect.OffsetRect(logoRect.CenterPoint() - newRect.CenterPoint());
 
         Gdiplus::Graphics graphics(dc->GetSafeHdc());
@@ -126,7 +125,7 @@ BOOL PngImage::EraseLogoWithNewLogo(CDC* dc, const CRect& logoRect, Gdiplus::Ima
     return TRUE;
 }
 
-BOOL PngImage::EraseLogo(Gdiplus::Image* newLogo, const CSize& newLogoSize)
+BOOL PngImage::EraseLogo(Gdiplus::Image* newLogo)
 {
     const CRect logoRect(1456, 1874, 1456 + 32, 1874 + 42);
 
@@ -159,7 +158,7 @@ BOOL PngImage::EraseLogo(Gdiplus::Image* newLogo, const CSize& newLogoSize)
         }
         else if (newLogo)
         {
-            EraseLogoWithNewLogo(&memdc, logoRect, newLogo, newLogoSize);
+            EraseLogoWithNewLogo(&memdc, logoRect, newLogo);
             wprintf(L"EraseLogoWithNewLogo\n");
             ret = TRUE;
         }
@@ -247,7 +246,7 @@ INT PngImage::CalculateMarginBottom(CDC* dc)
     return 0;
 }
 
-BOOL PngImage::CalculateMargin(CRect& rc)
+BOOL PngImage::CalculateMargin(CRect& margin)
 {
     if (!m_image)
     {
@@ -268,12 +267,10 @@ BOOL PngImage::CalculateMargin(CRect& rc)
         Gdiplus::Graphics graphics(memdc.GetSafeHdc());
         graphics.DrawImage(m_image, 0, 0);
 
-        m_rcMargin.left   = CalculateMarginLeft(&memdc);
-        m_rcMargin.top    = CalculateMarginTop(&memdc);
-        m_rcMargin.right  = CalculateMarginRight(&memdc);
-        m_rcMargin.bottom = CalculateMarginBottom(&memdc);
-
-        rc.CopyRect(m_rcMargin);
+        margin.left   = CalculateMarginLeft(&memdc);
+        margin.top    = CalculateMarginTop(&memdc);
+        margin.right  = CalculateMarginRight(&memdc);
+        margin.bottom = CalculateMarginBottom(&memdc);
     }
 
     memdc.SelectObject(oldBitmap);
@@ -284,23 +281,18 @@ BOOL PngImage::CalculateMargin(CRect& rc)
     return TRUE;
 }
 
-BOOL PngImage::CutEdge(const CRect* margin)
+BOOL PngImage::CutEdge(const CRect& margin)
 {    
     if (!m_image)
     {
         return FALSE;
     }
-
-    if (margin)
-    {
-        m_rcMargin.CopyRect(margin);
-    }
-
+        
     CRect cropRect;
-    cropRect.left   = m_rcMargin.left; 
-    cropRect.top    = m_rcMargin.top; 
-    cropRect.right  = m_image->GetWidth() - m_rcMargin.right;
-    cropRect.bottom = m_image->GetHeight() - m_rcMargin.bottom;
+    cropRect.left   = margin.left; 
+    cropRect.top    = margin.top; 
+    cropRect.right  = m_image->GetWidth() - margin.right;
+    cropRect.bottom = m_image->GetHeight() - margin.bottom;
 
     CDC dc;
     dc.Attach(::GetWindowDC(NULL));

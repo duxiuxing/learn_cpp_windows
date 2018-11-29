@@ -28,6 +28,12 @@
     <Filter Include="ArgumentsHandler\Parser">
       <UniqueIdentifier>{c23c6ad6-4b48-4a07-9b14-9d52aae1565a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ArgumentsHandler\-file">
+      <UniqueIdentifier>{f331a123-c63d-4593-847e-774fcfdc4561}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArgumentsHandler\-dir">
+      <UniqueIdentifier>{34edb3ba-d071-44c2-8840-7aebdcc69052}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\stdafx.h">
@@ -52,7 +58,13 @@
       <Filter>ArgumentsHandler\Parser</Filter>
     </ClInclude>
     <ClInclude Include="..\arguments_handler.h">
-      <Filter>Console Application\Header Files</Filter>
+      <Filter>ArgumentsHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\file_handler.h">
+      <Filter>ArgumentsHandler\-file</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dir_handler.h">
+      <Filter>ArgumentsHandler\-dir</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -69,7 +81,13 @@
       <Filter>Png Image</Filter>
     </ClCompile>
     <ClCompile Include="..\arguments_handler.cpp">
-      <Filter>Console Application\Source Files</Filter>
+      <Filter>ArgumentsHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\file_handler.cpp">
+      <Filter>ArgumentsHandler\-file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dir_handler.cpp">
+      <Filter>ArgumentsHandler\-dir</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

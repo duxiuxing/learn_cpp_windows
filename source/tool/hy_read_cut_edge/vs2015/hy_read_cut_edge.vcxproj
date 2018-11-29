@@ -150,6 +150,8 @@
     <ClInclude Include="..\argument.h" />
     <ClInclude Include="..\arguments_handler.h" />
     <ClInclude Include="..\arguments_parser.h" />
+    <ClInclude Include="..\dir_handler.h" />
+    <ClInclude Include="..\file_handler.h" />
     <ClInclude Include="..\png_image.h" />
     <ClInclude Include="..\helper.h" />
     <ClInclude Include="..\resource.h" />
@@ -158,6 +160,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\arguments_handler.cpp" />
+    <ClCompile Include="..\dir_handler.cpp" />
+    <ClCompile Include="..\file_handler.cpp" />
     <ClCompile Include="..\png_image.cpp" />
     <ClCompile Include="..\helper.cpp" />
     <ClCompile Include="..\main.cpp" />

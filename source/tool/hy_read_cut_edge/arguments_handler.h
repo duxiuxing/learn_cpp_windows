@@ -1,6 +1,7 @@
 #pragma once
 
 #include <atlpath.h>
+#include <gdiplus.h>
 
 class ArgumentsHandler
 {
@@ -11,5 +12,5 @@ public:
 protected:
     CPath* m_dirPath;
     CPath* m_filePath;
-    CPath* m_logoPath;
+    Gdiplus::Image* m_logo;
 };
