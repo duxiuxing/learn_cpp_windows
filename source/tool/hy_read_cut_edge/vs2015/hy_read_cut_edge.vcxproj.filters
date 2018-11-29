@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Console Application">
+      <UniqueIdentifier>{136d555d-3af4-4299-880f-daa11d4d94aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Console Application\Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Console Application\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Console Application\Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Helper">
+      <UniqueIdentifier>{b34628ba-fb87-4348-ac44-0ed06c97d7db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Png Image">
+      <UniqueIdentifier>{4c1e8963-890e-4225-99ef-1b0a786c6109}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArgumentsHandler">
+      <UniqueIdentifier>{6595b4a4-6364-45c2-ac2c-90a192687198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ArgumentsHandler\Parser">
+      <UniqueIdentifier>{c23c6ad6-4b48-4a07-9b14-9d52aae1565a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\stdafx.h">
+      <Filter>Console Application\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\targetver.h">
+      <Filter>Console Application\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\resource.h">
+      <Filter>Console Application\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helper.h">
+      <Filter>Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\png_image.h">
+      <Filter>Png Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\argument.h">
+      <Filter>ArgumentsHandler\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\arguments_parser.h">
+      <Filter>ArgumentsHandler\Parser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\arguments_handler.h">
+      <Filter>Console Application\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\stdafx.cpp">
+      <Filter>Console Application\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp">
+      <Filter>Console Application\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helper.cpp">
+      <Filter>Helper</Filter>
+    </ClCompile>
+    <ClCompile Include="..\png_image.cpp">
+      <Filter>Png Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\arguments_handler.cpp">
+      <Filter>Console Application\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\hy_read_cut_edge.rc">
+      <Filter>Console Application\Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
