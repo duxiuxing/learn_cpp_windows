@@ -12,8 +12,6 @@ PngImage::PngImage(const WCHAR* filePath)
     {
         m_image = new Gdiplus::Image(filePath);
     }
-
-    wprintf(L"%s\n", (const WCHAR*)m_filePath);
 }
 
 PngImage::~PngImage()
@@ -41,7 +39,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
     {
         if (horizontalLine[xOffset] != dc->GetPixel(logoRect.left + xOffset, y))
         {
-            delete horizontalLine;
+            delete[] horizontalLine;
             return FALSE;
         }
     }
@@ -52,7 +50,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
     {
         if (horizontalLine[xOffset] != dc->GetPixel(logoRect.left + xOffset, y))
         {
-            delete horizontalLine;
+            delete[] horizontalLine;
             return FALSE;
         }
     }
@@ -66,7 +64,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
         }
     }
 
-    delete horizontalLine;
+    delete[] horizontalLine;
     return TRUE;
 }
 
@@ -86,6 +84,7 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
     {
         if (verticalLine[yOffset] != dc->GetPixel(x, logoRect.top + yOffset))
         {
+            delete[] verticalLine;
             return FALSE;
         }
     }
@@ -96,6 +95,7 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
     {
         if (verticalLine[yOffset] != dc->GetPixel(x, logoRect.top + yOffset))
         {
+            delete[] verticalLine;
             return FALSE;
         }
     }
@@ -108,6 +108,7 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
         }
     }
 
+    delete[] verticalLine;
     return TRUE;
 }
 
@@ -159,7 +160,6 @@ BOOL PngImage::EraseLogo(Gdiplus::Image* newLogo)
         else if (newLogo)
         {
             EraseLogoWithNewLogo(&memdc, logoRect, newLogo);
-            wprintf(L"EraseLogoWithNewLogo\n");
             ret = TRUE;
         }
 
@@ -283,7 +283,11 @@ BOOL PngImage::CalculateMargin(CRect& margin)
 
 BOOL PngImage::CutEdge(const CRect& margin)
 {    
-    if (!m_image)
+    if (!m_image
+        || margin.left < 0
+        || margin.top < 0
+        || margin.right < 0
+        || margin.bottom < 0)
     {
         return FALSE;
     }
@@ -293,6 +297,22 @@ BOOL PngImage::CutEdge(const CRect& margin)
     cropRect.top    = margin.top; 
     cropRect.right  = m_image->GetWidth() - margin.right;
     cropRect.bottom = m_image->GetHeight() - margin.bottom;
+    
+    const int MIN_WIDTH = 48;
+    const int MIN_HEIGHT = 48;
+    if (cropRect.Width() < MIN_WIDTH
+        || cropRect.Width() > static_cast<int>(m_image->GetWidth())
+        || cropRect.Height() < MIN_HEIGHT
+        || cropRect.Height() > static_cast<int>(m_image->GetHeight()))
+    {
+        return FALSE;
+    }
+
+    if (cropRect.Width() == m_image->GetWidth()
+        && cropRect.Height() == m_image->GetHeight())
+    {
+        return TRUE;
+    }
 
     CDC dc;
     dc.Attach(::GetWindowDC(NULL));

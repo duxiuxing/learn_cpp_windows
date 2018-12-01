@@ -1,41 +1,15 @@
 #include "stdafx.h"
 #include "arguments_handler.h"
 #include "arguments_parser.h"
+#include "dir_handler.h"
+#include "file_handler.h"
 #include "png_image.h"
 
 ArgumentsHandler::ArgumentsHandler(int argc, char** argv)
-    : m_dirPath(nullptr)
-    , m_filePath(nullptr)
-    , m_logo(nullptr)
+    : m_logo(nullptr)
 {
     ArgumentsParser parser(argc, argv);
-        
-    if (parser.Has("-dir"))
-    {
-        const Argument* arg = parser.Get("-dir")->Next();
-        if (arg)
-        {
-            CPath dirPath(CString(arg->Text()));
-            if (dirPath.IsDirectory())
-            {
-                m_dirPath = new CPath(dirPath);
-            }
-        }
-    }
-
-    if (parser.Has("-file"))
-    {
-        const Argument* arg = parser.Get("-file")->Next();
-        if (arg)
-        {
-            CPath filePath(CString(arg->Text()));
-            if (!filePath.IsDirectory() && filePath.FileExists())
-            {
-                m_filePath = new CPath(filePath);
-            }
-        }
-    }
-
+    
     if (parser.Has("-logo"))
     {
         const Argument* arg = parser.Get("-logo")->Next();
@@ -49,34 +23,27 @@ ArgumentsHandler::ArgumentsHandler(int argc, char** argv)
         }
     }
 
-    if (m_filePath)
+    if (parser.Has("-dir"))
     {
-        HyRead::PngImage pngImage(*m_filePath);
-        pngImage.EraseLogo(m_logo);
+        const Argument* arg = parser.Get("-dir")->Next();
+        if (arg)
+        {
+            DirectoryHandler(CString(arg->Text()), m_logo);
+        }
+    }
 
-        CRect margin(0, 0, 0, 0);
-        pngImage.CalculateMargin(margin);
-
-        pngImage.CutEdge(margin);
-        pngImage.Save();
-        return;
+    if (parser.Has("-file"))
+    {
+        const Argument* arg = parser.Get("-file")->Next();
+        if (arg)
+        {
+            FileHandler(CString(arg->Text()), m_logo);
+        }
     }
 }
 
 ArgumentsHandler::~ArgumentsHandler()
 {
-    if (m_dirPath)
-    {
-        delete m_dirPath;
-        m_dirPath = nullptr;
-    }
-
-    if (m_filePath)
-    {
-        delete m_filePath;
-        m_filePath = nullptr;
-    }
-
     if (m_logo)
     {
         delete m_logo;

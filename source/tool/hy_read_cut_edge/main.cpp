@@ -10,11 +10,6 @@ CWinApp theApp;
 
 using namespace std;
 
-void Test()
-{
-
-}
-
 int main(int argc, char** argv)
 {
     int nRetCode = 0;

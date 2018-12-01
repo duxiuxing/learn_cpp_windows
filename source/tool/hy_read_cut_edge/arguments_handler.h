@@ -10,7 +10,5 @@ public:
     virtual ~ArgumentsHandler();
 
 protected:
-    CPath* m_dirPath;
-    CPath* m_filePath;
     Gdiplus::Image* m_logo;
 };
