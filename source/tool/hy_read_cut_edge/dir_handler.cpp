@@ -34,7 +34,7 @@ DirectoryHandler::~DirectoryHandler()
 
 BOOL DirectoryHandler::CheckFileName()
 {
-    _tprintf(_T("    Finding files...\n"));
+    _tprintf(_T("    CheckFileName() running...\n"));
     if (!m_dirPath.IsDirectory())
     {
         return FALSE;
@@ -177,7 +177,7 @@ void RectFromUint64(UINT64 u64, CRect& rc)
 
 BOOL DirectoryHandler::CalculateMargin(CRect& margin)
 {
-    _tprintf(_T("    Calculate margin running...\n"));
+    _tprintf(_T("    CalculateMargin() running...\n"));
 
     // 最多取20张图片作为样本，计算margin
     const size_t MAX_SAMPLE_COUNT = 20;
@@ -256,7 +256,7 @@ BOOL DirectoryHandler::CalculateMargin(CRect& margin)
 
 void DirectoryHandler::CutEdge(const CRect& margin)
 {
-    _tprintf(_T("    Cut edge running...\n"));
+    _tprintf(_T("    CutEdge() running...\n"));
     size_t count = 0;
     for (auto image : m_images)
     {
