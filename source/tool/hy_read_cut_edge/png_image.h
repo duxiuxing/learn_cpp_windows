@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 
 #include <atlpath.h>
 #include <gdiplus.h>
@@ -11,7 +11,7 @@ public:
     PngImage(const WCHAR* filePath);
     virtual ~PngImage();
 
-    // ²Á³ıÍ¼Æ¬ÓÒÏÂ½ÇµÄËøLogo£¬Èç¹û²Á³ıÊ§°Ü£¬ÔòÊ¹ÓÃnewLogoÀ´½øĞĞÕÚµ²
+    // æ“¦é™¤å›¾ç‰‡å³ä¸‹è§’çš„é”Logoï¼Œå¦‚æœæ“¦é™¤å¤±è´¥ï¼Œåˆ™ä½¿ç”¨newLogoæ¥è¿›è¡Œé®æŒ¡
     BOOL EraseLogo(Gdiplus::Image* newLogo);
 
     BOOL CalculateMargin(CRect& margin);

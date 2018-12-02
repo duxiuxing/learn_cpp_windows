@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <atlpath.h>
 #include <gdiplus.h>

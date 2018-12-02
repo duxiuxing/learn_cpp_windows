@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #include <atlpath.h>
 
@@ -10,7 +10,7 @@ BOOL QueryResourceFile(const TCHAR* fileRelativePath, ATL::CPath& fileFullPath);
 
 /*
     Retrieving the Class Identifier for an Encoder.
-    If the function fails, it returns �C1.
+    If the function fails, it returns –1.
     Or the function returns the index of the ImageCodecInfo object and
     copies the CLSID into the variable pointed to by pClsid.
 */

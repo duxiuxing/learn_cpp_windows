@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "png_image.h"
 #include "helper.h"
 
@@ -25,7 +25,7 @@ PngImage::~PngImage()
 
 BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
 {
-    // ÔÚlogoRectÉÏ·½2¸öÏñËØ´¦È¡Ïß¶ÎA£¬×¼±¸ÓÃËüÀ´¸²¸ÇÕû¸ölogoRectÇøÓò
+    // åœ¨logoRectä¸Šæ–¹2ä¸ªåƒç´ å¤„å–çº¿æ®µAï¼Œå‡†å¤‡ç”¨å®ƒæ¥è¦†ç›–æ•´ä¸ªlogoRectåŒºåŸŸ
     COLORREF* horizontalLine = new COLORREF[logoRect.Width()];
     int y = logoRect.top - 2;
     for (int xOffset = 0; xOffset < logoRect.Width(); ++xOffset)
@@ -33,7 +33,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
         horizontalLine[xOffset] = dc->GetPixel(logoRect.left + xOffset, y);
     }
 
-    // ÔÚlogoRectÉÏ·½1¸öÏñËØ´¦È¡Ïß¶ÎB£¬¼ì²éBµÄ¸÷¸öÏñËØÊÇ·ñÓëAÒ»ÖÂ
+    // åœ¨logoRectä¸Šæ–¹1ä¸ªåƒç´ å¤„å–çº¿æ®µBï¼Œæ£€æŸ¥Bçš„å„ä¸ªåƒç´ æ˜¯å¦ä¸Aä¸€è‡´
     y = logoRect.top - 1;
     for (int xOffset = 0; xOffset < logoRect.Width(); ++xOffset)
     {
@@ -44,7 +44,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
         }
     }
 
-    // ÔÚlogoRectÏÂ·½1¸öÏñËØ´¦È¡Ïß¶ÎC£¬¼ì²éCµÄ¸÷¸öÏñËØÊÇ·ñÓëAÒ»ÖÂ
+    // åœ¨logoRectä¸‹æ–¹1ä¸ªåƒç´ å¤„å–çº¿æ®µCï¼Œæ£€æŸ¥Cçš„å„ä¸ªåƒç´ æ˜¯å¦ä¸Aä¸€è‡´
     y = logoRect.bottom;
     for (int xOffset = 0; xOffset < logoRect.Width(); ++xOffset)
     {
@@ -55,7 +55,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
         }
     }
 
-    // ¸²¸ÇLogo
+    // è¦†ç›–Logo
     for (int yOffset = 0; yOffset < logoRect.Height(); ++yOffset)
     {
         for (int xOffset = 0; xOffset < logoRect.Width(); ++xOffset)
@@ -70,7 +70,7 @@ BOOL PngImage::EraseLogoWithHorizontalLine(CDC* dc, const CRect& logoRect)
 
 BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
 {
-    // ÔÚlogoRect×ó²à2¸öÏñËØ´¦È¡Ïß¶ÎA£¬×¼±¸ÓÃËüÀ´¸²¸ÇÕû¸ölogoRectÇøÓò
+    // åœ¨logoRectå·¦ä¾§2ä¸ªåƒç´ å¤„å–çº¿æ®µAï¼Œå‡†å¤‡ç”¨å®ƒæ¥è¦†ç›–æ•´ä¸ªlogoRectåŒºåŸŸ
     COLORREF* verticalLine = new COLORREF[logoRect.Height()];
     int x = logoRect.left - 2;
     for (int yOffset = 0; yOffset < logoRect.Height(); ++yOffset)
@@ -78,7 +78,7 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
         verticalLine[yOffset] = dc->GetPixel(x, logoRect.top + yOffset);
     }
 
-    // ÔÚlogoRect×ó²à1¸öÏñËØ´¦È¡Ïß¶ÎB£¬¼ì²éBµÄ¸÷¸öÏñËØÊÇ·ñÓëAÒ»ÖÂ
+    // åœ¨logoRectå·¦ä¾§1ä¸ªåƒç´ å¤„å–çº¿æ®µBï¼Œæ£€æŸ¥Bçš„å„ä¸ªåƒç´ æ˜¯å¦ä¸Aä¸€è‡´
     x = logoRect.left - 1;
     for (int yOffset = 0; yOffset < logoRect.Height(); ++yOffset)
     {
@@ -89,7 +89,7 @@ BOOL PngImage::EraseLogoWithVerticalLine(CDC* dc, const CRect& logoRect)
         }
     }
 
-    // ÔÚlogoRectÓÒ²à1¸öÏñËØ´¦È¡Ïß¶ÎC£¬¼ì²éCµÄ¸÷¸öÏñËØÊÇ·ñÓëAÒ»ÖÂ
+    // åœ¨logoRectå³ä¾§1ä¸ªåƒç´ å¤„å–çº¿æ®µCï¼Œæ£€æŸ¥Cçš„å„ä¸ªåƒç´ æ˜¯å¦ä¸Aä¸€è‡´
     x = logoRect.right;
     for (int yOffset = 0; yOffset < logoRect.Height(); ++yOffset)
     {

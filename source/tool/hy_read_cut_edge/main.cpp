@@ -1,14 +1,10 @@
-// hy_read_cut_edge.cpp : Defines the entry point for the console application.
+﻿// hy_read_cut_edge.cpp : Defines the entry point for the console application.
 //
 
 #include "stdafx.h"
 #include "arguments_handler.h"
 
-#include "png_image.h"
-
 CWinApp theApp;
-
-using namespace std;
 
 int main(int argc, char** argv)
 {
@@ -32,69 +28,7 @@ int main(int argc, char** argv)
             Gdiplus::GdiplusStartup(&gdiplusToken, &gdiplusInput, NULL);
 
             ArgumentsHandler(argc, argv);
-            /*
-            {                
-                int pageCount = 548;
-                bool saveFile = true;
-                CRect margin(11, 0, 11, 0);
 
-                CString pngPathFormat;
-                if (pageCount > 100)
-                    pngPathFormat = L"J:\\mipad\\ing\\1\\%0.3d.png";
-                else
-                    pngPathFormat = L"J:\\mipad\\ing\\1\\%0.2d.png";
-
-                Gdiplus::Image logoImage(L"J:\\weixin.png");
-                CSize logoSize(48, 48);
-                
-                if (saveFile)
-                {
-                    for (int index = 1; index <= pageCount; ++index)
-                    {
-                        CString path;
-                        path.Format(pngPathFormat, index);
-
-                        HyRead::PngImage pngImage(path);
-                        pngImage.EraseLogo(&logoImage, logoSize);                        
-                       
-                        pngImage.CutEdge(&margin);
-                        pngImage.Save();
-                    }
-                }
-                else
-                {
-                    CRect lastMarginCalc(0, 0, 0, 0);
-                    for (int index = 1; index <= 30; ++index)
-                    {
-                        CString path;
-                        path.Format(pngPathFormat, index);
-
-                        HyRead::PngImage pngImage(path);
-                        pngImage.EraseLogo(&logoImage, logoSize);
-
-                        CRect marginCalc(0, 0, 0, 0);
-                        pngImage.CalculateMargin(marginCalc);
-                        if (lastMarginCalc != marginCalc)
-                        {
-                            lastMarginCalc = marginCalc;
-                            wprintf(L"margin = rect(%d, %d, %d, %d)\n", marginCalc.left, marginCalc.top, marginCalc.right, marginCalc.bottom);
-                        }
-                    }
-                }
-
-                for (int index = 1; index <= pageCount; ++index)
-                {
-                    CString path;
-                    path.Format(pngPathFormat, index);
-
-                    HyRead::PngImage pngImage(path);                    
-                    CRect margin(89, 0, 89, 0);
-                    pngImage.CutEdge(&margin);
-                    pngImage.Save();
-                }
-                
-            }
-            */
             Gdiplus::GdiplusShutdown(gdiplusToken);
         }
     }

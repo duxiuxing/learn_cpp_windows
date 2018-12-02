@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "dir_handler.h"
 #include "png_image.h"
 
@@ -179,7 +179,7 @@ BOOL DirectoryHandler::CalculateMargin(CRect& margin)
 {
     _tprintf(_T("    CalculateMargin() running...\n"));
 
-    // ×î¶àÈ¡20ÕÅÍ¼Æ¬×÷ÎªÑù±¾£¬¼ÆËãmargin
+    // æœ€å¤šå–20å¼ å›¾ç‰‡ä½œä¸ºæ ·æœ¬ï¼Œè®¡ç®—margin
     const size_t MAX_SAMPLE_COUNT = 20;
     size_t count = m_fileNames.size() < MAX_SAMPLE_COUNT
                    ? m_fileNames.size()
@@ -201,7 +201,7 @@ BOOL DirectoryHandler::CalculateMargin(CRect& margin)
     m_fileNames.erase(m_fileNames.begin(), m_fileNames.begin() + count);
     if (marginToFileName.size() == 1)
     {
-        // ËùÓĞÑù±¾ÎÄ¼şµÄmargin¶¼Ò»Ñù
+        // æ‰€æœ‰æ ·æœ¬æ–‡ä»¶çš„marginéƒ½ä¸€æ ·
         RectFromUint64(marginToFileName.begin()->first, margin);
         return TRUE;
     }

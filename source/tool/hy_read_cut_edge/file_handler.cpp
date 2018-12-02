@@ -1,4 +1,4 @@
-#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "file_handler.h"
 #include "png_image.h"
 
